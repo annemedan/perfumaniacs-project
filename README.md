@@ -108,7 +108,7 @@ Store model
 
 ## Backlog
 
-[See the Trello board.](https://trello.com/b/Ni3giVKf/ironhackproject)
+[See the Perfumaniac Trello board.](https://trello.com/invite/b/pIbj4yAs/a5a233e7140542b4e5631e361073b188/project-management)
 
 
 
