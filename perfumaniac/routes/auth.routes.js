@@ -1,6 +1,6 @@
 const router = required("express").Router();
 
-//routes
+//routes router
 // GET  /signup
 router.get("/signup", (req, res) => {
     res.render("auth/signup-form");
