@@ -17,6 +17,12 @@ const favicon = require("serve-favicon");
 // https://www.npmjs.com/package/path
 const path = require("path");
 
+
+
+//* for session and mongo store we need to require the pckgs
+const MongoStore = require("connect-mongo");
+const session = require("express-session");
+
 // Middleware configuration
 module.exports = (app) => {
   // In development environment the app logs
@@ -36,4 +42,22 @@ module.exports = (app) => {
 
   // Handles access to the favicon
   app.use(favicon(path.join(__dirname, "..", "public", "images", "favicon.ico")));
+
+
+//middleware for the session and connectmongo
+
+  const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/lab-express-basic-auth";
+
+  app.use( session({
+  secret: process.env.SESSION_SECRET || "project2perfumaniacs",
+  cookie: { maxAge: 1800000 }, //12 hours
+  resave: true,
+  saveUninitialized: false,
+  store: MongoStore.create({
+    mongoUrl: MONGO_URI, 
+    ttl: 60 * 60 * 24, //1 day
+    }),
+  })
+  );
+
 };
