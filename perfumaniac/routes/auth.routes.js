@@ -76,9 +76,65 @@ router.get("/signup", (req, res, next) => {
   
   });
 
+  //get /login
+router.get("/login", (req, res) => {
+        res.render("auth/login-form.hbs");
+    });
 
+    // post /login
 
+router.post("/login", (req, res) => {
+      const { username, password } = req.body;
+    
+      const usernameNotProvided = !username || username === "";
+      const passwordNotProvided = !password || password === "";
+    
+      if (usernameNotProvided || passwordNotProvided) {
+        res.render("auth/login-form", {
+          errorMessage: "You need to provide username and password to log in.",
+        });
+    
+        return;
+      }
+  
+      let userLoginInfo;
+      User.findOne({ username: username })
+        .then((foundUser) => {
+          userLoginInfo = foundUser;
+          if (!foundUser){
+            throw new Error("Credentials not correct. Try again!")
+          }
+          return bcrypt.compare(password, foundUser.password)
+        })
+        .then((correctPassword) => {
+          if (!correctPassword){
+            throw new Error("Credentials not correct. Try again!")
+          }
+          else if (correctPassword){
+            req.session.user = userLoginInfo;
+            res.redirect("/");
+          }
+        })
+        .catch((err)=>{
+            res.render("auth/login-form", {
+                errorMessage: err.message || "Provide username and password.",
+              });
+        })
+        
+  })
 
+  //get logout
+
+router.get("/logout", userLoggedIn, (req,res) => {
+    req.session.destroy((err) => {
+      if (err){
+        return res.render("error");
+      }
+  
+      res.redirect("/");
+  
+    })
+})
 
 
 
