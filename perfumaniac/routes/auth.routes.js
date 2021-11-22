@@ -136,6 +136,16 @@ router.get("/logout", userLoggedIn, (req,res) => {
     })
 })
 
+//get all perfumes
+
+// get details 
+
+// post edited details
+
+// search
+
+// error pages
+
 
 
 module.exports = router;
