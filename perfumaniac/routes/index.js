@@ -26,13 +26,13 @@ router.get("/edit", userLoggedIn, (req, res) => {
   
 })
 
-// router.get("/-to be created-", userLoggedIn, (req, res) => {
+// router.get("/details/:perfumeId", userLoggedIn, (req, res) => {
 //   let userLoggedIn = false;
 //   const userInfo = req.session.user;
 //   if (userInfo){
 //     userLoggedIn = true;
 //   }
-//   res.render("secret-page", { userLoggedIn: userLoggedIn, userInfo });
+//   res.render("perfume-details", { userLoggedIn: userLoggedIn, userInfo });
 // })
 
 
