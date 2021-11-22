@@ -5,7 +5,9 @@ const bcrypt = require("bcryptjs");
 const zxcvbn = require("zxcvbn");
 const userLoggedIn = require("./../middleware/login-confirmation")
 
+//import the data 
 const perfumesDb = require("./../perfumes.json");
+
 
 const SALT_ROUNDS = 10;
 
@@ -137,10 +139,16 @@ router.get("/logout", userLoggedIn, (req,res) => {
 })
 
 //get all perfumes
+// this is just somethign we can base ourselves so that we can already have some data on the site
+//   Perfume.deleteMany() // removes all docs from one collection
+//     .then(() => {
+//     return Perfume.insertMany(perfumesDb);
+//   })
+  
 
 // get details 
 
-// post edited details
+// post edited details - the details page has to have the edit button to the store
 
 // search
 
