@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Puppies+Play&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -17,7 +19,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(177, 125, 247);
+  background-color: rgb(218, 176, 169);
 }
 
 li {
@@ -33,20 +35,58 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #d967dd;
+  background-color: rgb(192, 149, 141);
+  color: rgb(247, 160, 175);
 }
 
 .active {
-  background-color: #8248a8;
+  background-color: rgb(212, 165, 156);
 }
 
 footer {
   position:absolute;
-  color: white;
+  color: rgb(235, 215, 211);
   bottom:0;
   width:100%;
-  height: 3rem; 
-  background: rgb(177, 125, 247);
+  height: 2rem; 
+  background:  rgb(218, 176, 169);
   justify-content: center;
   text-align: right;
+  padding: 0.7rem;
+  font-size: 0.7rem;
+}
+
+#intro {
+  background-image: url("/images/perfume3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 100%) {
+  #intro {
+    margin-top: 0px;
+  }
+}
+
+.welcome-page {
+  margin-top: 18%;
+}
+
+h1 {
+  font-family: 'Puppies Play', cursive;
+  font-size: 9rem;
+}
+
+label {
+  padding: 0.5rem;
+
+}
+
+button {
+  border-radius: 12px;
+  padding: 12px 35px;
+  font-size: 14px;
+  background-color: rgb(231, 157, 144);
 }

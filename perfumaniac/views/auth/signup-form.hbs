@@ -1,27 +1,40 @@
 	
-<form id="form" action="/signup" method="POST">
-    <p>
-       <label for="username">Username</label><br>
-    <input type="text" name="username" placeholder="Choose username" required> 
-    </p>
-    
-    <p>
-        <label for="password">Password</label><br>
-        <input type="password" name="password" placeholder="Choose a password" required>
-    </p>
-    
-    <p>
-        <label for="store">Store</label><br>
-        <input type="checkbox" id="store-checkbox" name="store">
-
-    </p>
-    
-    <button type="submit">Create user</button>
-  </form>
 
 
-{{!-- error message display: --}} 
-<br>
-{{#if errorMessage}}
-  <div class="error-message">{{ errorMessage }}</div>
-{{/if}}
+     <div id="intro" class="bg-image shadow-2-strong">
+      <div class="mask" style="">
+        <div class="container d-flex align-items-center justify-content-center text-center h-100">
+          <div class="text-white  welcome-page">
+            <form id="form" action="/signup" method="POST">
+                <p>
+                <label for="username">Username</label><br>
+                <input type="text" name="username" placeholder="Choose username" required> 
+                </p>
+                
+                <p>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" placeholder="Choose a password" required>
+                </p>
+                
+                <p>
+                    <label for="store">Store</label><br>
+                    <input type="checkbox" id="store-checkbox" name="store">
+
+                </p>
+                
+                <button type="submit">Create user</button>
+            </form>
+
+
+            {{!-- error message display: --}} 
+            <br>
+            {{#if errorMessage}}
+            <div class="error-message">{{ errorMessage }}</div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
