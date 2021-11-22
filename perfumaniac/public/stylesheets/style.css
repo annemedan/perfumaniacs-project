@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Puppies+Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petemoss&family=Puppies+Play&display=swap');
 
 * {
   margin: 0;
@@ -10,8 +10,10 @@ body {
 }
 
 
-h1 {
-  color: 15px;
+h2 {
+  display: flex;
+  align-items: center;
+  color: rgb(141, 108, 113);
 }
 
 ul {
@@ -44,17 +46,22 @@ li a:hover:not(.active) {
 }
 
 footer {
-  position:absolute;
-  color: rgb(235, 215, 211);
-  bottom:0;
-  width:100%;
-  height: 2rem; 
-  background:  rgb(218, 176, 169);
-  justify-content: center;
-  text-align: right;
+  list-style-type: none;
+  margin: 0;
   padding: 0.7rem;
+  overflow: hidden;
+  border: 1px solid rgb(218, 176, 169);;
+  background-color: rgb(218, 176, 169);;
+  color: rgb(235, 215, 211);;
+  position: fixed;
   font-size: 0.7rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+
 }
+
 
 #intro {
   background-image: url("/images/perfume3.jpg");
@@ -89,4 +96,76 @@ button {
   padding: 12px 35px;
   font-size: 14px;
   background-color: rgb(231, 157, 144);
+}
+
+
+
+.perfumes-grid {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 33% 34% 33%;
+  gap: 1rem;
+  align-items: center;
+  max-width: 95%;
+  margin: 0 auto;
+  font: 500 100%/1.5 system-ui;
+  background-color: white;
+}
+
+
+.img-perfume {
+  display:flex;
+  max-width: 40%;
+  float:left;
+  padding: 1.5rem;
+  height: auto;
+  width: 10rem;
+  padding: 0.5rem;
+  
+}
+
+.perfume-name {
+  font-weight: 250;
+  font-size: 2rem;
+  font-family: 'Petemoss', cursive;
+}
+
+.perfume-manufactorer {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.text-perfume {
+  align-items: center;
+  text-align: center;
+}
+
+#allperf {
+  background-image: url("/images/marbleGliter.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100%;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 100%) {
+  #allperf {
+    margin-top: 0px;
+  }
+}
+
+.perfbutton{
+  border-radius: 12px;
+  padding: 3px 3px;
+  font-size: 10px;
+  background-color: rgb(231, 157, 144);
+  display: flex;
+  align-content: center;
+  color: white;
+  border-color: lightgrey;
+}
+
+.buttons-to-edit {
+    display:flex;
+    
 }

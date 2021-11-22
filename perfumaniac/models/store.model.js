@@ -8,7 +8,7 @@ const storeSchema = new Schema(
   },
 );
 
-const Store = model("Store", storeSchema);
+const Store = mongoose.model("Store", storeSchema);
 
 module.exports = Store;
 

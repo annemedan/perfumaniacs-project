@@ -11,6 +11,7 @@ const perfumeSchema = new Schema(
   },
 );
 
-const User = model("Perfume", perfumeSchema);
+const Perfume = mongoose.model("Perfume", perfumeSchema);
 
-module.exports = User;
+module.exports = Perfume;
+

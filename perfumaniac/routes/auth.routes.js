@@ -1,6 +1,7 @@
 const router = require("express").Router();
 
 const User = require("./../models/User.model");
+const Perfume = require("./../models/perfume.model")
 const bcrypt = require("bcryptjs");
 const zxcvbn = require("zxcvbn");
 const userLoggedIn = require("./../middleware/login-confirmation")
@@ -139,14 +140,74 @@ router.get("/logout", userLoggedIn, (req,res) => {
 })
 
 //get all perfumes - create a layout for all of them
-// this is just somethign we can base ourselves so that we can already have some data on the site
-//   Perfume.deleteMany() // removes all docs from one collection
-//     .then(() => {
-//     return Perfume.insertMany(perfumesDb);
-//   })
-  
 
-// get details 
+router.get("/allperfumes", (req, res) => {
+  Perfume.deleteMany()
+      .then(() => {
+        return Perfume.insertMany(perfumesDb);
+      })
+      .then((foundPerfumes) => {
+        res.render("perfumes/all-perfumes", { foundPerfumes: foundPerfumes , user: req.session.user });
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+})
+
+router.get("/perfume/:perfumeId", (req, res) => {
+    const perfumeId = req.params.perfumeId;
+    console.log(perfumeId);
+    Perfume.findById(perfumeId)
+        .then((foundPerfume) => {
+          console.log(foundPerfume);
+          res.render("perfumes/perfume-details", { foundPerfume: foundPerfume, user: req.session.user});
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+    })
+
+router.get("/perfume/:perfumeId", (req, res) => {
+    const perfumeId = req.params.perfumeId;
+    Perfume.findById(perfumeId)
+        .then((foundPerfume) => {
+            res.render("perfumes/perfume-edit", { foundPerfume: foundPerfume, user: req.session.user});
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      })
+
+
+router.post("/perfume/:perfumeId/delete", (req, res, next) => {
+  const perfumeId = req.params.perfumeId;
+  console.log(perfumeId);
+    Perfume.deleteOne({_id: perfumeId})
+    .then(() => {
+      res.redirect("/allperfumes");
+    })
+    .catch((err)=> {
+        console.log(err);
+    })
+    
+  }); 
+
+  
+// router.get("/perfumes/:perfumeId/edit", userLoggedIn, (req, res) => {
+//       let userLoggedIn = false;
+//       const userInfo = req.session.user;
+//       //console.log(userInfo);
+//       if (userInfo){
+//         userLoggedIn = true;
+//       }
+//       if (userInfo.store === true){
+//         res.render("perfumes/perfume-edit", { userLoggedIn: userLoggedIn, userInfo });
+//       } else {
+//         res.render("perfumes/perfume-edit", { userLoggedIn: userLoggedIn, userInfo, errorMessage: "You don't have the credentials to access this page" });
+//       }
+      
+//     })
+    
 
 // post edited details - the details page has to have the edit/delete [these are 2 routes] button to the store
 

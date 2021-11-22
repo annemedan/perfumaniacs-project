@@ -12,11 +12,11 @@
 
    <body>
         <ul>
-            {{#if userLoggedIn}}
+            {{#if user}}
                <li><a href="/">Home</a></li>
                <li><a href="/allperfumes">All Perfumes</a></li>
-               <li><a href="/edit">Edit Perfume</a></li>
-               <li><a href="/">-to be created-</a></li>
+               <li><a href="/perfumes/search">Find Perfume</a></li>
+               <li><a href="/perfume/add">Add new Perfurme</a></li>
                <li><a href="/logout">Log Out</a></li>
             {{else}}
                <li><a href="/">Home</a></li>

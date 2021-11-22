@@ -1,8 +1,41 @@
 
-{{#if userInfo.store}}
+this is the edit page
   <div>
-      Edit page - for testing - should appear only for store users
+          <h2>Edit Perfume</h2>
+
+          <form action="/perfume/{{foundPerfume._id}}/edit" method="POST">
+
+            <p>   
+                  <label>Name:</label>
+                  <input type="text" name="name" placeholder="{{foundPerfume.name}}"/>
+              </p>
+
+              <p>
+                  <label>Manufacturer:</label>
+                  <input type="text" name="manufacturer" placeholder="{{foundPerfume.manufacturer}}"/> 
+              </p>
+
+            <p>
+                  <label>Fragrance:</label>
+                  <input type="text" name="fragrance" placeholder="{{foundPerfume.fragrance}}"/>
+            </p>
+
+            <p>
+                  <label>Composition:</label>
+                  <input type="text" name="composition" placeholder="{{foundPerfume.composition}}"/>
+            </p>
+
+            <p>
+                  <label>Image:</label>
+                  <input type="text" name="image" placeholder="{{foundPerfume.name}}"/>
+            </p>
+
+
+          <button action="submit">Submit</button>  <button action="/perfumes/delete">Delete</button>
+          </form>
+
   </div>
+  {{/each}}
 {{/if}}
 
 

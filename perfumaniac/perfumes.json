@@ -1,7 +1,5 @@
 [{
-  "_id": {
-    "$oid": "61978845cd3f87fe6e7bab29"
-  },
+
   "name": "212",
   "manufacturer": "Carolina Herrera",
   "fragrance": [
@@ -17,9 +15,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/carolina-herrera/8411061865408_01-o/carolina-herrera-212-nyc-eau-de-toilette-for-women___28.jpg"
 },{
-  "_id": {
-    "$oid": "61978a2acd3f87fe6e7bab2a"
-  },
+
   "name": "Angel",
   "manufacturer": "Thierry Mugler",
   "fragrance": [
@@ -36,9 +32,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/mugler/3439600018035_12/mugler-angel-eau-de-parfum-refillable-for-women___28.jpg"
 },{
-  "_id": {
-    "$oid": "61978ac5cd3f87fe6e7bab2b"
-  },
+
   "name": "La Vie Est Belle",
   "manufacturer": "Lancôme",
   "fragrance": [
@@ -57,9 +51,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/lancome/3605532612836_01-o/lancome-la-vie-est-belle-eau-de-parfum-for-women___30.jpg"
 },{
-  "_id": {
-    "$oid": "61978b94cd3f87fe6e7bab2d"
-  },
+ 
   "name": "Sì",
   "manufacturer": "Giorgio Armani",
   "fragrance": [
@@ -78,9 +70,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/armani/3605521816658_01-o/armani-si-eau-de-parfum-for-women___36.jpg"
 },{
-  "_id": {
-    "$oid": "61978c10cd3f87fe6e7bab2e"
-  },
+
   "name": "Voce Viva",
   "manufacturer": "Valentino",
   "fragrance": [
@@ -95,9 +85,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/valentino/3614273073899_01-o/valentino-voce-viva-eau-de-parfum-for-women_.jpg"
 },{
-  "_id": {
-    "$oid": "61978c83cd3f87fe6e7bab2f"
-  },
+
   "name": "Bloom",
   "manufacturer": "Gucci",
   "fragrance": [
@@ -110,9 +98,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/gucci/8005610481005_08/gucci-bloom-eau-de-parfum-for-women___16.jpg"
 },{
-  "_id": {
-    "$oid": "61978d71cd3f87fe6e7bab30"
-  },
+ 
   "name": "Lady Million",
   "manufacturer": "Paco Rabanne",
   "fragrance": [
@@ -131,9 +117,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/paco-rabanne/3349668508471m_01-o/paco-rabanne-lady-million-eau-de-parfum-for-women___24.jpg"
 },{
-  "_id": {
-    "$oid": "61978dcacd3f87fe6e7bab31"
-  },
+ 
   "name": "Chance Eau Tendre",
   "manufacturer": "Chanel",
   "fragrance": [
@@ -150,9 +134,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/chanel/3145891263107_02-o/chanel-chance-eau-tendre-eau-de-toilette-for-women___25.jpg"
 },{
-  "_id": {
-    "$oid": "61978e6bcd3f87fe6e7bab32"
-  },
+
   "name": "Coco Mademoiselle",
   "manufacturer": "Chanel",
   "fragrance": [
@@ -173,9 +155,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/chanel/3145891165203_02-o/chanel-coco-mademoiselle-eau-de-parfum-for-women___31.jpg"
 },{
-  "_id": {
-    "$oid": "61978edacd3f87fe6e7bab34"
-  },
+
   "name": "Chance",
   "manufacturer": "Chanel",
   "fragrance": [
@@ -194,9 +174,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/chanel/3145891264203_01-o/chanel-chance-eau-de-parfum-for-women___25.jpg"
 },{
-  "_id": {
-    "$oid": "61978fa5cd3f87fe6e7bab35"
-  },
+
   "name": "Because It's You",
   "manufacturer": "Giorgio Armani",
   "fragrance": [
@@ -214,9 +192,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/armani/03605522041486_01-o/armani-emporio-because-its-you-eau-de-parfum-for-women___19.jpg"
 },{
-  "_id": {
-    "$oid": "61979023cd3f87fe6e7bab36"
-  },
+  
   "name": "Bamboo",
   "manufacturer": "Gucci",
   "fragrance": [
@@ -232,9 +208,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/gucci/737052925127_02-o/gucci-bamboo-eau-de-parfum-for-women___21.jpg"
 },{
-  "_id": {
-    "$oid": "6197907fcd3f87fe6e7bab37"
-  },
+ 
   "name": "Black Opium",
   "manufacturer": "Yves Saint Laurent",
   "fragrance": [
@@ -250,9 +224,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/yves-saint-laurent/yslblow_aedp10_02-o/yves-saint-laurent-black-opium-eau-de-parfum-for-women___17.jpg"
 },{
-  "_id": {
-    "$oid": "619790f0cd3f87fe6e7bab38"
-  },
+
   "name": "Libre",
   "manufacturer": "Yves Saint Laurent",
   "fragrance": [
@@ -270,9 +242,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/yves-saint-laurent/3614272648425_01-o/yves-saint-laurent-libre-eau-de-parfum-for-women_.jpg"
 },{
-  "_id": {
-    "$oid": "61979153cd3f87fe6e7bab39"
-  },
+
   "name": "Light Blue Forever",
   "manufacturer": "Dolce & Gabbana",
   "fragrance": [
@@ -289,9 +259,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/dolce-gabbana/3423222015978_01/dolce-gabbana-light-blue-forever-eau-de-parfum-for-women_.jpg"
 },{
-  "_id": {
-    "$oid": "619791b5cd3f87fe6e7bab3b"
-  },
+ 
   "name": "Flora",
   "manufacturer": "Gucci",
   "fragrance": [
@@ -306,9 +274,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/gucci/737052294667_01-o/gucci-flora-eau-de-parfum-for-women___16.jpg"
 },{
-  "_id": {
-    "$oid": "619793f5cd3f87fe6e7bab3c"
-  },
+
   "name": "Mon Paris",
   "manufacturer": "Yves Saint Laurent",
   "fragrance": [
@@ -328,9 +294,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/yves-saint-laurent/3614270561658_01-o/yves-saint-laurent-mon-paris-eau-de-parfum-for-women___15.jpg"
 },{
-  "_id": {
-    "$oid": "61979535cd3f87fe6e7bab3d"
-  },
+
   "name": "Acqua di Gioia",
   "manufacturer": "Giorgio Armani",
   "fragrance": [
@@ -345,9 +309,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/armani/3614272811935_01-o/armani-acqua-di-gioia-eau-de-parfum-for-women_.jpg"
 },{
-  "_id": {
-    "$oid": "61979589cd3f87fe6e7bab3e"
-  },
+
   "name": "My Way",
   "manufacturer": "Giorgi Armani",
   "fragrance": [
@@ -364,9 +326,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/armani/3614272907904_01-o/armani-my-way-eau-de-parfum-refill-for-women_.jpg"
 },{
-  "_id": {
-    "$oid": "619795f0cd3f87fe6e7bab40"
-  },
+ 
   "name": "Daisy Dream",
   "manufacturer": "Marc Jacobs",
   "fragrance": [
@@ -382,9 +342,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/marc-jacobs/3614220904740_01-o/marc-jacobs-daisy-dream-forever-eau-de-parfum-for-women___15.jpg"
 },{
-  "_id": {
-    "$oid": "6197966dcd3f87fe6e7bab41"
-  },
+
   "name": "Daisy Love",
   "manufacturer": "Marc Jacobs",
   "fragrance": [
@@ -402,9 +360,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/marc-jacobs/3614229382389_01-o/marc-jacobs-daisy-love-eau-so-sweet-eau-de-toilette-for-women_.jpg"
 },{
-  "_id": {
-    "$oid": "619796d5cd3f87fe6e7bab42"
-  },
+
   "name": "Daisy",
   "manufacturer": "Marc Jacobs",
   "fragrance": [
@@ -421,9 +377,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/marc-jacobs/3614220904740_01-o/marc-jacobs-daisy-dream-forever-eau-de-parfum-for-women___15.jpg"
 },{
-  "_id": {
-    "$oid": "6197974fcd3f87fe6e7bab43"
-  },
+
   "name": "Perfect",
   "manufacturer": "Marc Jacobs",
   "fragrance": [
@@ -438,9 +392,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/marc-jacobs/3616302779994_01-o/marc-jacobs-perfect-intense-eau-de-parfum-for-women_.jpg"
 },{
-  "_id": {
-    "$oid": "6197a669cd3f87fe6e7bab44"
-  },
+ 
   "name": "N. 5",
   "manufacturer": "Chanel",
   "fragrance": [
@@ -460,9 +412,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/chanel/3145891255607_01-o/chanel-n5-eau-de-parfum-for-women___26.jpg"
 },{
-  "_id": {
-    "$oid": "6197a77ccd3f87fe6e7bab45"
-  },
+ 
   "name": "Olympea",
   "manufacturer": "Paco Rabanne",
   "fragrance": [
@@ -477,9 +427,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/paco-rabanne/3349668528677_01-o/paco-rabanne-olympea-eau-de-parfum-for-women___28.jpg"
 },{
-  "_id": {
-    "$oid": "6197a8eacd3f87fe6e7bab46"
-  },
+
   "name": "J'adore",
   "manufacturer": "Dior",
   "fragrance": [
@@ -492,9 +440,7 @@
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/dior/3348900417878_01/dior-jadore-eau-de-parfum-para-mulheres___35.jpg"
 },{
-  "_id": {
-    "$oid": "6197a950cd3f87fe6e7bab48"
-  },
+
   "name": "Miss Dior",
   "manufacturer": "Dior",
   "fragrance": [
@@ -507,4 +453,18 @@
     "salt"
   ],
   "image": "https://cdn.notinoimg.com/detail_thumb_2k/paco-rabanne/3349668528677_01-o/paco-rabanne-olympea-eau-de-parfum-for-women___28.jpg"
+},{
+
+  "name": "bananarama",
+  "manufacturer": "Anne",
+  "fragrance": [
+    "floral"
+  ],
+  "composition": [
+    "ambergris",
+    "cashmere wood",
+    "vanilla",
+    "salt"
+  ],
+  "image": "https://www.news-medical.net/image.axd?picture=2018%2F2%2Fbanana.jpg"
 }]

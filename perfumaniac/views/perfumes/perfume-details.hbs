@@ -1,1 +1,36 @@
-To test details
+   
+                        <div class="perfume-item">
+                                <img class="img-perfume" src="{{foundPerfume.image}}" /> 
+                                <div class="text-perfume">
+                                    <p class="perfume-name"> {{foundPerfume.name}} </p>
+                                    <p class="perfume-manufactorer"> {{foundPerfume.manufacturer}} </p>
+                                    <p>Fragrance notes: {{foundPerfume.fragrance}} </p>
+                                    <p>Composition: {{foundPerfume.composition}}</p>
+                                    <p>Availability: </p>
+                                    <p>Stores:</p>
+                                    <p>Sizes:</p>
+                                    
+                                </div> 
+
+                                <div>
+                                    
+                                </div>
+
+                                {{#if user.store}}
+                                <div class="buttons-to-edit">
+                                        <form action="/perfume/{{foundPerfume._id}}/edit" method="GET">
+                                            <button action="submit">Edit</button> 
+                                        </form>
+                                        <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
+                                            <button action="submit">Delete</button> 
+                                        </form>
+                                </div>
+                               
+                               
+                                
+                                {{/if}}
+                                   
+                        </div>
+                     
+                  
+                    
