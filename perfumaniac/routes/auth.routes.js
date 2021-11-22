@@ -138,7 +138,7 @@ router.get("/logout", userLoggedIn, (req,res) => {
     })
 })
 
-//get all perfumes
+//get all perfumes - create a layout for all of them
 // this is just somethign we can base ourselves so that we can already have some data on the site
 //   Perfume.deleteMany() // removes all docs from one collection
 //     .then(() => {
@@ -148,9 +148,9 @@ router.get("/logout", userLoggedIn, (req,res) => {
 
 // get details 
 
-// post edited details - the details page has to have the edit button to the store
+// post edited details - the details page has to have the edit/delete [these are 2 routes] button to the store
 
-// search
+// search // get by id
 
 // error pages
 
