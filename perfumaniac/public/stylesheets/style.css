@@ -96,6 +96,20 @@ button {
   padding: 12px 35px;
   font-size: 14px;
   background-color: rgb(231, 157, 144);
+  margin-left: 10px;
+  color: white;
+}
+
+button > a {
+    text-decoration: none;
+    color: white;
+
+}
+
+button > a:hover {
+  text-decoration: none;
+  color: white;
+
 }
 
 
@@ -110,6 +124,7 @@ button {
   margin: 0 auto;
   font: 500 100%/1.5 system-ui;
   background-color: white;
+  margin-bottom: 15px;
 }
 
 
@@ -167,5 +182,7 @@ button {
 
 .buttons-to-edit {
     display:flex;
-    
+  
 }
+
+

@@ -14,10 +14,10 @@
                                     <p class="perfume-manufactorer"> {{this.manufacturer}} </p>
                                     <p> Fragrance notes: {{this.fragrance}} </p>
                                 </div> 
-                                {{#if ../user.store}}
-                                <form action="/perfume/{{this._id}}" method="GET">
-                                   <button class="perfbutton" type="submit">Further details</button> 
-                                </form>
+                                {{#if ../user}}
+                                    <form action="/perfume/{{this._id}}" method="GET">
+                                        <button class="perfbutton" type="submit">Further details</button> 
+                                    </form>
                                 {{/if}}
                                    
                         </div>

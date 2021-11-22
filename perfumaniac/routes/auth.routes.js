@@ -142,10 +142,11 @@ router.get("/logout", userLoggedIn, (req,res) => {
 //get all perfumes - create a layout for all of them
 
 router.get("/allperfumes", (req, res) => {
-  Perfume.deleteMany()
-      .then(() => {
-        return Perfume.insertMany(perfumesDb);
-      })
+  // Perfume.deleteMany()
+  //     .then(() => {
+  //       return Perfume.insertMany(perfumesDb);
+  //     })
+  Perfume.find()
       .then((foundPerfumes) => {
         res.render("perfumes/all-perfumes", { foundPerfumes: foundPerfumes , user: req.session.user });
       })
@@ -178,36 +179,50 @@ router.get("/perfume/:perfumeId", (req, res) => {
           })
       })
 
-
+//find by id and DELETE - not working
 router.post("/perfume/:perfumeId/delete", (req, res, next) => {
   const perfumeId = req.params.perfumeId;
-  console.log(perfumeId);
-    Perfume.deleteOne({_id: perfumeId})
-    .then(() => {
+  console.log("perfumeId", perfumeId);
+    // Perfume.findByIdAndDelete(perfumeId)
+    Perfume.findByIdAndRemove(perfumeId)
+    .then((result) => {
+      console.log(result)
       res.redirect("/allperfumes");
     })
     .catch((err)=> {
         console.log(err);
     })
     
-  }); 
+}); 
 
-  
-// router.get("/perfumes/:perfumeId/edit", userLoggedIn, (req, res) => {
-//       let userLoggedIn = false;
-//       const userInfo = req.session.user;
-//       //console.log(userInfo);
-//       if (userInfo){
-//         userLoggedIn = true;
-//       }
-//       if (userInfo.store === true){
-//         res.render("perfumes/perfume-edit", { userLoggedIn: userLoggedIn, userInfo });
-//       } else {
-//         res.render("perfumes/perfume-edit", { userLoggedIn: userLoggedIn, userInfo, errorMessage: "You don't have the credentials to access this page" });
-//       }
-      
-//     })
+//find by id and open edit page - also not working
+router.get("/perfume/:perfumeId/edit", userLoggedIn, (req, res) => {
+  const perfumeId = req.params.perfumeId;
+  Perfume.findById(perfumeId)
+      .then((foundPerfume) => {
+          res.render("perfumes/perfume-edit", { foundPerfume: foundPerfume, user: req.session.user});
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+    })
+
+
+  // router.get("/perfumes/:perfumeId/edit", userLoggedIn, (req, res) => {
+  //   let userLoggedIn = false;
+  //   const userInfo = req.session.user;
+  //   if (userInfo){
+  //     userLoggedIn = true;
+  //   }
+  //   if (userInfo.store === true){
+  //     res.render("perfumes/perfume-edit", { userLoggedIn: userLoggedIn, userInfo });
+  //   } else {
+  //     res.render("perfumes/perfume-edit", { userLoggedIn: userLoggedIn, userInfo, errorMessage: "You don't have the credentials to access this page" });
+  //   }
     
+  // })
+  
+
 
 // post edited details - the details page has to have the edit/delete [these are 2 routes] button to the store
 

@@ -12,23 +12,20 @@
                                     
                                 </div> 
 
-                                <div>
-                                    
-                                </div>
-
-                                {{#if user.store}}
+                                
                                 <div class="buttons-to-edit">
-                                        <form action="/perfume/{{foundPerfume._id}}/edit" method="GET">
-                                            <button action="submit">Edit</button> 
-                                        </form>
+                                        
+                                         {{#if user.store}} <button><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>   {{/if}}
+
+
                                         <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
-                                            <button action="submit">Delete</button> 
+                                           {{#if user.store}} <button action="submit">Delete</button> {{/if}}
                                         </form>
                                 </div>
                                
                                
                                 
-                                {{/if}}
+                              
                                    
                         </div>
                      
