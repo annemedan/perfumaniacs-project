@@ -7,7 +7,6 @@ const zxcvbn = require("zxcvbn");
 const userLoggedIn = require("./../middleware/login-confirmation")
 
 //import the data 
-const perfumesDb = require("./../perfumes.json");
 
 
 const SALT_ROUNDS = 10;
@@ -142,10 +141,7 @@ router.get("/logout", userLoggedIn, (req, res) => {
 //get all perfumes - create a layout for all of them
 
 router.get("/allperfumes", (req, res) => {
-  // Perfume.deleteMany()
-  //     .then(() => {
-  //       return Perfume.insertMany(perfumesDb);
-  //     })
+
   Perfume.find()
     .then((foundPerfumes) => {
       res.render("perfumes/all-perfumes", { foundPerfumes: foundPerfumes, user: req.session.user });
