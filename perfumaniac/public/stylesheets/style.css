@@ -6,7 +6,8 @@
 }
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
 }
 
 h2 {
@@ -65,7 +66,7 @@ footer {
   background-image: url("/images/perfume3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 
 /* Height for devices larger than 576px */
@@ -76,7 +77,7 @@ footer {
 }
 
 .welcome-page {
-  margin-top: 18%;
+  margin-top: 0;
 }
 
 h1 {
