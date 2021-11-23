@@ -1,33 +1,24 @@
-   
-                        <div class="perfume-item">
-                                <img class="img-perfume" src="{{foundPerfume.image}}" /> 
-                                <div class="text-perfume">
-                                    <p class="perfume-name"> {{foundPerfume.name}} </p>
-                                    <p class="perfume-manufactorer"> {{foundPerfume.manufacturer}} </p>
-                                    <p>Fragrance notes: {{foundPerfume.fragrance}} </p>
-                                    <p>Composition: {{foundPerfume.composition}}</p>
-                                    <p>Availability: </p>
-                                    <p>Stores:</p>
-                                    <p>Sizes:</p>
-                                    
-                                </div> 
+<div class="perfume-item">
+  <img class="img-perfume" src="{{foundPerfume.image}}" />
+  <div class="text-perfume">
+    <p class="perfume-name"> {{foundPerfume.name}} </p>
+    <p class="perfume-manufacturer"> {{foundPerfume.manufacturer}} </p>
+    <p>Fragrance notes: {{foundPerfume.fragrance}} </p>
+    <p>Composition: {{foundPerfume.composition}}</p>
+    <p>Availability: </p>
+    <p>Stores:</p>
+    <p>Sizes:</p>
 
-                                
-                                <div class="buttons-to-edit">
-                                        
-                                         {{#if user.store}} <button><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>   {{/if}}
+  </div>
 
+  <div class="buttons-to-edit">
+    {{#if user.store}}
+      <button><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>
+    {{/if}}
 
-                                        <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
-                                           {{#if user.store}} <button action="submit">Delete</button> {{/if}}
-                                        </form>
-                                </div>
-                               
-                               
-                                
-                              
-                                   
-                        </div>
-                     
-                  
-                    
+    <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
+      {{#if user.store}} <button action="submit">Delete</button> {{/if}}
+    </form>
+  </div>
+
+</div>

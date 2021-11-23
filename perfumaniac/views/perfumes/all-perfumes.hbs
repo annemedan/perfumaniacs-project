@@ -1,34 +1,24 @@
 <div id="allperf" class="bg-image">   
-            <h2>Perfumes List:</h2>
-
-     <div class="container">
-       
-         
-            <div class="perfumes-grid">
-                    {{#each foundPerfumes}}
-                        
-                        <div class="perfume-item">
-                                <img class="img-perfume" src="{{this.image}}" /> 
-                                <div class="text-perfume">
-                                    <p class="perfume-name"> {{this.name}} </p>
-                                    <p class="perfume-manufactorer"> {{this.manufacturer}} </p>
-                                    <p> Fragrance notes: {{this.fragrance}} </p>
-                                </div> 
-                                {{#if ../user}}
-                                    <form action="/perfume/{{this._id}}" method="GET">
-                                        <button class="perfbutton" type="submit">Further details</button> 
-                                    </form>
-                                {{/if}}
-                                   
-                        </div>
-                     
-                    {{/each}}
-                    
-
-            </div> 
-
+  <h2>Perfumes List</h2>
+    <div class="container">     
+      <div class="perfumes-grid">
+        {{#each foundPerfumes}}
+          <div class="perfume-item">
+            <img class="img-perfume" src="{{this.image}}" /> 
+              <div class="text-perfume">
+                <p class="perfume-name"> {{this.name}} </p>
+                <p class="perfume-manufacturer"> {{this.manufacturer}} </p>
+                <p> Fragrance notes: {{this.fragrance}} </p>
+        {{#if ../user}}
+              <form action="/perfume/{{this._id}}" method="GET">
+                <button class="perfbutton" type="submit">Further details</button> 
+              </form>
+        {{/if}}
+              </div> 
+          </div>
+        {{/each}}
+      </div> 
     </div>
-
 </div>
 
 
