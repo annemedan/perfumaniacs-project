@@ -118,7 +118,7 @@ button > a:hover {
   margin: 0;
   background-color: white;
   margin-bottom: 20px;
-  border: 0.6em solid rgb(141, 108, 113);
+  border: 0.6em solid rgb(192, 149, 141);
 }
 
 .img-perfume {
@@ -182,16 +182,17 @@ button > a:hover {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: rgb(192, 149, 141);
+  background-color: rgb(218, 176, 169);
   color: white;
   cursor: pointer;
-  padding: 15px;
+  padding: 0.35rem 0.6rem;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 #myBtn:hover {
-  background-color: #555;
+  background-color: rgb(192, 149, 141);
 }
 
 /* Search bar */

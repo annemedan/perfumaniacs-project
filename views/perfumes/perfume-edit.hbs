@@ -1,5 +1,5 @@
 
-this is the edit page
+{{#if user.store}}
   <div>
           <h2>Edit Perfume</h2>
 
@@ -35,7 +35,10 @@ this is the edit page
           </form>
 
   </div>
-
+{{else}}
+<p> this is the edit page 
+you don't have access to this page </p>
+{{/if}}
 
 
 

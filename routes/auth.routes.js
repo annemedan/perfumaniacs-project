@@ -236,7 +236,7 @@ router.get("/perfumes/search", (req, res) => {
   console.log("allPerfumes", allPerfumes);
   Perfume.find(allPerfumes)
     .then((perfumesList) => {
-      res.render("perfumes/perfume-search", { perfumesList: perfumesList })
+      res.render("perfumes/perfume-search", { perfumesList: perfumesList, user: req.session.user })
       console.log("perfumesList", perfumesList);
     })
     .catch((err) => { console.log(err); })
