@@ -110,12 +110,12 @@ button > a:hover {
 
 .perfumes-grid {
   display: grid;
-  padding: 2rem;
-  grid-template-columns: 33% 34% 33%;
-  gap: 1.5rem;
-  max-width: 95%;
-  margin: 0 auto;
-  font: 500 100%/1.5 system-ui;
+  justify-content: space-around;
+  padding: 1.5rem;
+  grid-template-columns: 32% 34% 34%;
+  gap: 1.2rem;
+  max-width: 99%;
+  margin: 0;
   background-color: white;
   margin-bottom: 20px;
   border: 0.6em solid rgb(141, 108, 113);
@@ -123,12 +123,9 @@ button > a:hover {
 
 .img-perfume {
   display: flex;
-  height: 15rem;
+  height: 13rem;
   float: left;
-  padding: 1.5rem;
- 
-  
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .perfume-name {
