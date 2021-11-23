@@ -1,12 +1,23 @@
 
 {{! Search bar  }}
 <div class="input-group">
-  <input
-    type="search"
-    class="form-control rounded"
-    placeholder="Search your favorite perfume"
-    aria-label="Search your favorite perfume"
-    aria-describedby="search-addon"
-  />
-  <button type="button" class="btn btn-outline-primary">Search</button>
+    <form id="form" action="/perfumes/search" method="GET">
+                
+     <input class="form-control rounded" placeholder="Search for your favorite perfume or manufacturer" name="q" type="search" aria-label="Search" /> 
+              <button type="submit" class="btn btn-outline-primary">Search</button>
+    </form>
 </div>
+
+<p class="searched-for">Results for: <b> {{query}} </b> </p>
+
+{{#each searchResults}}
+<div class="card">
+  <img src="{{this.image}}" alt="Perfume Photo">
+  <div class="container-card">
+    <h4 class="perfume-name"><b>{{this.name}}</b></h4>
+    <p class="perfume-manufacturer">{{this.manufacturer}}</p>
+    <p><i>Fragrance:</i> {{this.fragrance}}</p>
+    <p><i>Composition:</i> {{this.composition}}</p>
+  </div>
+</div>
+{{/each}}

@@ -17,14 +17,4 @@ router.get("/", (req, res, next) => {
 
 
 
-// router.get("/details/:perfumeId", userLoggedIn, (req, res) => {
-//   let userLoggedIn = false;
-//   const userInfo = req.session.user;
-//   if (userInfo){
-//     userLoggedIn = true;
-//   }
-//   res.render("perfume-details", { userLoggedIn: userLoggedIn, userInfo });
-// })
-
-
 module.exports = router;

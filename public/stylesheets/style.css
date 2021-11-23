@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Petemoss&family=Puppies+Play&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
 * {
   margin: 0;
@@ -13,8 +14,11 @@ body {
 h2 {
   display: flex;
   align-items: center;
-  color: rgb(82, 67, 70);
+  justify-content: space-around;
+  color: rgb(192, 149, 141);
   font-weight: bold;
+  padding: 10px;
+  -webkit-text-stroke: 1px rgb(143, 107, 101);
 }
 
 ul {
@@ -204,4 +208,42 @@ button > a:hover {
   color: rgb(192, 149, 141);
   background-color: rgb(238, 210, 206);
   border-color: white;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgb(238, 210, 206);
+  transition: 0.3s;
+  padding-top: 2rem;
+  display: grid;
+  justify-content: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 3rem;
+
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgb(192, 149, 141);
+}
+
+/* Add some padding inside the card container */
+.container-card {
+  padding: 2px 16px;
+}
+
+.card > img {
+  display: flex;
+  height: 13rem;
+  float: left;
+}
+
+.searched-for {
+  font-family: 'Amatic SC', cursive;
+  padding: 2rem;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+ 
 }

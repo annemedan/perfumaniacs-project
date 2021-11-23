@@ -190,6 +190,29 @@ router.post("/perfume/:perfumeId/delete", (req, res, next) => {
     })
 });
 
+// //* search 
+
+router.get("/perfumes/search", async (req, res) => {
+    const query = req.query.q
+    console.log(">>---", query);
+
+    let searchResults;
+    if (query) {
+        let regex = new RegExp(query, 'i', 'g');
+        searchResults = await Perfume.find({ $or:
+           [ { name: regex  }, {manufacturer: regex} ]
+        });
+
+    } else {
+        searchResults = [];
+    }
+
+    res.render("perfumes/perfume-search", { searchResults, query, user: req.session.user});
+});
+
+
+
+
 //*find by id and open edit page 
 router.get("/perfume/:perfumeId/edit", userLoggedIn, (req, res) => {
   const perfumeId = req.params.perfumeId;
@@ -229,18 +252,7 @@ router.get("/perfume/:perfumeId/edit", userLoggedIn, (req, res) => {
 
 // })
 
-// //* search // get by id
 
-router.get("/perfumes/search", (req, res) => {
-  const allPerfumes = req.query.perfumes;
-  console.log("allPerfumes", allPerfumes);
-  Perfume.find(allPerfumes)
-    .then((perfumesList) => {
-      res.render("perfumes/perfume-search", { perfumesList: perfumesList, user: req.session.user })
-      console.log("perfumesList", perfumesList);
-    })
-    .catch((err) => { console.log(err); })
-})
 
 // error pages
 
