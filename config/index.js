@@ -46,7 +46,7 @@ module.exports = (app) => {
 
 //middleware for the session and connectmongo
 
-  const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/perfumaniacs-project";
+  const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/perfumaniac";
 
   app.use( session({
   secret: process.env.SESSION_SECRET || "project2perfumaniacs",
