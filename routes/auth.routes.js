@@ -267,43 +267,40 @@ router.post("/perfumes/add", (req, res) => {
 
 // save as available
 
-router.post('/available/:perfumeId', (req, res) => {
-    const newStock = Available.create({
+router.post('/available/:perfumeId', async (req, res) => {
+  try {
+    const inStock = await Available.create({
       user: req.session.user._id,
       perfume: req.params.perfumeId
-    })
-    .then((createdStock) => {
-      console.log(createdStock);
-      res.redirect("/available");
-      return createdStock
-    })
-    .catch ((error) => {
-    res.render("error");
-    console.log("An error occurred", error);
-    })
-  
-  console.log(newStock);
-});
-
-router.get('/available', async (req, res) => {
-  try {
-    let availables = await Available.find({
-      user: req.session.currentUser._id
-    }, null, {
-      sort: {
-        createdAt: -1
-      }
-    }).populate("perfume");
-    console.log(availables);
-    res.render("stores/store-availability.hbs", {
-      availables,
-      user: req.session.currentUser
     });
+    console.log(inStock);
+    res.redirect("/available");
   } catch (error) {
     res.render("error");
     console.log("An error occurred", error);
   }
+  console.log();
 });
+
+// router.get('/available', async (req, res) => {
+//   try {
+//     let availables = await Available.find({
+//       user: req.session.currentUser._id
+//     }, null, {
+//       sort: {
+//         createdAt: -1
+//       }
+//     }).populate("perfume");
+//     console.log(availables);
+//     res.render("stores/store-availability.hbs", {
+//       availables,
+//       user: req.session.currentUser
+//     });
+//   } catch (error) {
+//     res.render("error");
+//     console.log("An error occurred", error);
+//   }
+// });
 
 // // Delete from favorites
 
