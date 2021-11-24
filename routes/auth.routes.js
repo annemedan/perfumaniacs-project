@@ -245,12 +245,12 @@ router.get("/perfume/:perfumeId/edit", userLoggedIn, (req, res) => {
 
 
 // this creates a new perfume
-router.get("/perfumes/add", (req, res, next) => {
-  res.render("perfumes/perfume-create.hbs")
+router.get("/perfumes/add", userLoggedIn, (req, res, next) => {
+  res.render("perfumes/perfume-create.hbs", { user: req.session.user } )
 
 });
 
-router.post("/perfumes/add", (req, res) => {
+router.post("/perfumes/add", userLoggedIn, (req, res) => {
   console.log("got to the post route");
   let { name, manufacturer, fragrance, composition, image } = req.body;
   console.log("after got req body");
