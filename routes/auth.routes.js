@@ -4,7 +4,10 @@ const User = require("./../models/User.model");
 const Perfume = require("./../models/perfume.model")
 const bcrypt = require("bcryptjs");
 const zxcvbn = require("zxcvbn");
-const userLoggedIn = require("./../middleware/login-confirmation")
+const userLoggedIn = require("./../middleware/login-confirmation");
+const Store = require("../models/store.model");
+const Available = require("../models/availability.model");
+
 
 //import the data 
 
@@ -174,6 +177,7 @@ router.get("/perfume/:perfumeId", (req, res) => {
     })
 })
 
+
 //*find by id and DELETE 
 router.post("/perfume/:perfumeId/delete", (req, res, next) => {
   const perfumeId = req.params.perfumeId;
@@ -260,5 +264,53 @@ router.post("/perfumes/add", (req, res) => {
           res.render("perfumes/perfume-create.hbs")
       })
 })
+
+// save as available
+
+router.post('/available/:perfumeId', (req, res) => {
+    const newStock = Available.create({
+      user: req.session.user._id,
+      perfume: req.params.perfumeId
+    })
+    .then((createdStock) => {
+      console.log(createdStock);
+      res.redirect("/available");
+      return createdStock
+    })
+    .catch ((error) => {
+    res.render("error");
+    console.log("An error occurred", error);
+    })
+  
+  console.log(newStock);
+});
+
+router.get('/available', async (req, res) => {
+  try {
+    let availables = await Available.find({
+      user: req.session.currentUser._id
+    }, null, {
+      sort: {
+        createdAt: -1
+      }
+    }).populate("perfume");
+    console.log(availables);
+    res.render("stores/store-availability.hbs", {
+      availables,
+      user: req.session.currentUser
+    });
+  } catch (error) {
+    res.render("error");
+    console.log("An error occurred", error);
+  }
+});
+
+// // Delete from favorites
+
+// router.post('/delete-favorite/:recipeId', async (req, res) => {
+//   const toDel = await Favorite.findByIdAndRemove(req.params.recipeId);
+//   res.redirect('/favorites');
+// });
+
 
 module.exports = router;

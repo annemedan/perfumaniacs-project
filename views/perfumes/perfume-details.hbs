@@ -18,6 +18,12 @@
       <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
         {{#if user.store}} <button action="submit">Delete</button> {{/if}}
       </form>
+
+        <form action="/available/{{foundPerfume._id}}" method="POST">
+           {{#if user.store}} <button action="submit">Add to stock</button> {{/if}}
+        </form>
+    
+      </form>
     </div>
   </div>
 </div>
