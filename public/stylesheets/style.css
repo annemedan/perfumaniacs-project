@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Petemoss&family=Puppies+Play&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 * {
   margin: 0;
@@ -21,7 +22,7 @@ h2 {
   -webkit-text-stroke: 1px rgb(143, 107, 101);
 }
 
-ul {
+ul.nav-bar {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -29,11 +30,11 @@ ul {
   background-color: rgb(218, 176, 169);
 }
 
-li {
+li.nav-bar {
   float: left;
 }
 
-li a {
+li.nav-bar a {
   display: block;
   color: white;
   text-align: center;
@@ -175,6 +176,7 @@ button > a:hover {
 
 .buttons-to-edit {
   display: flex;
+  justify-content: center;
 }
 
 /* Go to top of page btn */
@@ -217,7 +219,7 @@ button > a:hover {
   transition: 0.3s;
   padding-top: 2rem;
   display: grid;
-  justify-content: center;
+  justify-content: space-around;
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 2rem;
@@ -236,8 +238,10 @@ button > a:hover {
 
 .card > img {
   display: flex;
-  height: 13rem;
   float: left;
+  justify-content: center;
+  height: 13rem;
+ 
 }
 
 .searched-for {
@@ -272,9 +276,27 @@ button > a:hover {
   }
 }
 
-
 button.btn-search {
   display: flex;
   justify-content: center;
   margin-left: 45%;
+}
+
+.fragrance-txt {
+  font-family: 'EB Garamond', serif;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+
+}
+
+.perfume-details-card {
+  margin-top: 10px;
+}
+
+.img-perfume-details {
+  display: flex;
+  height: 12rem;
+  float: left;
+  padding: 1rem;
 }
