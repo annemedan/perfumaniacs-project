@@ -126,7 +126,14 @@ button > a:hover {
   border: 0.6em solid rgb(192, 149, 141);
 }
 
+.img-card-section{
+  height:13rem;
+  display: flex;
+  justify-content: center;
+}
+
 .img-perfume {
+  height:13rem;
   padding-top:  1rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
