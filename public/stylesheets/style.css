@@ -101,6 +101,7 @@ button {
   background-color: rgb(231, 157, 144);
   margin-left: 10px;
   color: white;
+  border-color: lightgrey;
 }
 
 button > a {
@@ -126,15 +127,15 @@ button > a:hover {
   border: 0.6em solid rgb(192, 149, 141);
 }
 
-.img-card-section{
-  height:13rem;
+.img-card-section {
+  height: 13rem;
   display: flex;
   justify-content: center;
 }
 
 .img-perfume {
-  height:13rem;
-  padding-top:  1rem;
+  height: 13rem;
+  padding-top: 1rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -232,6 +233,23 @@ button > a:hover {
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 2rem;
+}
+
+/** Card for details page */
+.card-position{
+  padding-top: 8rem;
+  position: relative;
+  }
+.card2 {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgb(238, 210, 206);
+  transition: 0.3s;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  display: grid;
+  justify-content: center;
+  margin-left: 20%;
+  margin-right: 20%; 
 }
 
 /* On mouse-over, add a deeper shadow */

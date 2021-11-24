@@ -1,23 +1,33 @@
-  <div class="card perfume-details-card">
-  <div class="perfume-item">
-    <img src="{{foundPerfume.image}}" alt="Perfume Photo" class="img-perfume-details">
-    <div class="text-perfume">
-      <div class="container-card">
-          <h3 class="perfume-name"> {{foundPerfume.name}} </h3>
-          <p class="perfume-manufacturer"> {{foundPerfume.manufacturer}} </p>
-          <p class="fragrance-txt"><i>Fragrance notes: </i> {{foundPerfume.fragrance}}</p>
-          <p class="fragrance-txt"><i>Composition:</i> {{foundPerfume.composition}}</p>
+<div id="allperf" class="bg-image">
+  <div class="card-position">
+    <div class="card2 mb-4" style="max-width: 60rem;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{foundPerfume.image}}" alt="Perfume Photo" class="img-perfume-details" />
+        </div>
+        <div class="col-md-8">
+          <div class="text-perfume">
+            <div class="container-card">
+              <h3 class="perfume-name">{{foundPerfume.name}} </h3>
+              <p class="perfume-manufacturer">{{foundPerfume.manufacturer}}</p>
+              <p class="fragrance-txt"><i>Fragrance notes: </i> {{foundPerfume.fragrance}}</p>
+              <p class="fragrance-txt"><i>Composition: </i> {{foundPerfume.composition}}</p>
+              </p>
+            </div>
+          </div>
+
+          <div class="buttons-to-edit">
+            {{#if user.store}}
+            <button><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>
+            {{/if}}
+
+            <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
+              {{#if user.store}} <button action="submit">Delete</button> {{/if}}
+            </form>
+          </div>
+
+        </div>
       </div>
-    </div>
-
-    <div class="buttons-to-edit">
-      {{#if user.store}}
-        <button><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>
-      {{/if}}
-
-      <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
-        {{#if user.store}} <button action="submit">Delete</button> {{/if}}
-      </form>
     </div>
   </div>
 </div>
