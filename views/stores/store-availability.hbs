@@ -1,1 +1,10 @@
-Each Store user - their favourite List
+Each Store user - their favourite Lists
+
+    {{#each availables}}
+            {{#if this.user.username}}
+            <p>Store: {{this.user.username}}</p>
+                {{#each availables.perfume.name}}
+                Perfumes Available: <li>  {{this}} </li>
+                {{/each}}
+            {{/if}}
+    {{/each}}

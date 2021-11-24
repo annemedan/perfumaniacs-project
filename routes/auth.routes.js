@@ -273,7 +273,6 @@ router.post('/available/:perfumeId', async (req, res) => {
       user: req.session.user._id,
       perfume: req.params.perfumeId
     });
-    console.log(inStock);
     res.redirect("/available");
   } catch (error) {
     res.render("error");
@@ -282,25 +281,25 @@ router.post('/available/:perfumeId', async (req, res) => {
   console.log();
 });
 
-// router.get('/available', async (req, res) => {
-//   try {
-//     let availables = await Available.find({
-//       user: req.session.currentUser._id
-//     }, null, {
-//       sort: {
-//         createdAt: -1
-//       }
-//     }).populate("perfume");
-//     console.log(availables);
-//     res.render("stores/store-availability.hbs", {
-//       availables,
-//       user: req.session.currentUser
-//     });
-//   } catch (error) {
-//     res.render("error");
-//     console.log("An error occurred", error);
-//   }
-// });
+router.get('/available', async (req, res) => {
+  try {
+    let availables = await Available.find(/*{
+      user: req.session.user._id
+    }, null, {
+      sort: {
+        createdAt: -1
+      }
+    } */).populate("perfume").populate("user");
+    console.log("AVAILABLES ARRAY", availables);
+    res.render("stores/store-availability.hbs", {
+      availables,
+      user: req.session.user
+    });
+  } catch (error) {
+    res.render("error");
+    console.log("An error occurred", error);
+  }
+});
 
 // // Delete from favorites
 
