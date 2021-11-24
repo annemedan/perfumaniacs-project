@@ -196,9 +196,10 @@ router.get("/perfumes/search", async (req, res) => {
 
     let searchResults;
     if (query) {
-        searchResults = await Perfume.find().or(
-          [ { name: { $regex: query, $options: "i" }}, { manufacturer: { $regex: query, $options: "i" } }, { compostion: { $regex: query, $options: "i" } }, {fragrance: { $regex: query, $options: "i" }}]
-       );
+        let regex = new RegExp(query, 'i', 'g');
+        searchResults = await Perfume.find({ $or:
+           [ { name: regex  }, {manufacturer: regex} ]
+        });
 
     } else {
         searchResults = [];
