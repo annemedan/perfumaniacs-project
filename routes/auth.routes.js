@@ -44,7 +44,6 @@ router.post("/signup", (req, res) => {
     store = false;
   }
 
-
   // password strength
   const passwordCheck = zxcvbn(password);
   if (passwordCheck.score < 1) { // we usually use 3 for strong password, but will keep 1 to run tests
@@ -73,6 +72,7 @@ router.post("/signup", (req, res) => {
     })
     .then((createdUser) => {
       console.log("created user", createdUser);
+      req.session.user = createdUser;
       res.redirect('/');
     })
     .catch((err) => {
