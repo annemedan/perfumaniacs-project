@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Petemoss&family=Puppies+Play&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 
 * {
   margin: 0;
@@ -127,10 +127,10 @@ button > a:hover {
 }
 
 .img-perfume {
-  display: flex;
-  height: 13rem;
-  float: left;
-  padding: 1rem;
+  padding-top:  1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .perfume-name {
@@ -147,6 +147,7 @@ button > a:hover {
 .text-perfume {
   align-items: center;
   text-align: center;
+  padding-bottom: 1.5rem;
 }
 
 #allperf {
@@ -165,7 +166,8 @@ button > a:hover {
 
 .perfbutton {
   border-radius: 12px;
-  padding: 3px 3px;
+  padding: 3px;
+  margin: auto;
   font-size: 10px;
   background-color: rgb(231, 157, 144);
   display: flex;
@@ -223,7 +225,6 @@ button > a:hover {
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 2rem;
-
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -241,16 +242,15 @@ button > a:hover {
   float: left;
   justify-content: center;
   height: 13rem;
- 
 }
 
 .searched-for {
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   padding: 2rem;
   font-size: 2.5rem;
   display: flex;
   justify-content: center;
- 
+
   font-weight: 1000;
 }
 
@@ -283,11 +283,10 @@ button.btn-search {
 }
 
 .fragrance-txt {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-weight: 300;
   display: flex;
   justify-content: center;
-
 }
 
 .perfume-details-card {
@@ -298,14 +297,27 @@ button.btn-search {
   display: flex;
   height: 12rem;
   float: left;
-  padding: 1rem;
+  padding: 0.2rem;
 }
 
-.edit-perfume, h3{
+.edit-perfume,
+h3 {
   display: flex;
   justify-content: center;
 }
 
 .no-credentials {
   padding-top: 10%;
+}
+
+/** cards styling */
+.card {
+  box-shadow: 0 4px 8px 0 rgb(238 210 206);
+  transition: 0.3s;
+  padding-top: 0.5rem;
+  display: grid;
+  justify-content: space-around;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 1.5rem;
 }
