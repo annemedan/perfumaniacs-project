@@ -283,17 +283,14 @@ router.post('/available/:perfumeId', async (req, res) => {
 
 router.get('/available', async (req, res) => {
   try {
-    let availables = await Available.find(/*{
-      user: req.session.user._id
-    }, null, {
-      sort: {
-        createdAt: -1
-      }
-    } */).populate("perfume").populate("user");
+    let availables = await Available.find().populate("perfume").populate("user");
     console.log("AVAILABLES ARRAY", availables);
+    
+    const allUsers = 
+    
     res.render("stores/store-availability.hbs", {
       availables,
-      user: req.session.user
+      user: req.session.user, 
     });
   } catch (error) {
     res.render("error");
