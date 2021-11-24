@@ -1,33 +1,32 @@
 
+
+
 {{#if user.store}}
-  <div>
-          <h2>Edit Perfume</h2>
+
+<h2>Edit Perfume</h2>
+  <div class="edit-perfume">
+          
 
           <form action="/perfume/{{foundPerfume._id}}/edit" method="POST">
 
             <p>   
                   <label>Name:</label>
-                  <input type="text" name="name" placeholder="{{foundPerfume.name}}"/>
+                  <input type="text" name="name" placeholder="{{foundPerfume.name}}"  size="50"/>
               </p>
 
               <p>
                   <label>Manufacturer:</label>
-                  <input type="text" name="manufacturer" placeholder="{{foundPerfume.manufacturer}}"/> 
+                  <input type="text" name="manufacturer" placeholder="{{foundPerfume.manufacturer}}"  size="50"/> 
               </p>
 
             <p>
                   <label>Fragrance:</label>
-                  <input type="text" name="fragrance" placeholder="{{foundPerfume.fragrance}}"/>
+                  <input type="text" name="fragrance" placeholder="{{foundPerfume.fragrance}}"  size="50"/>
             </p>
 
             <p>
                   <label>Composition:</label>
-                  <input type="text" name="composition" placeholder="{{foundPerfume.composition}}"/>
-            </p>
-
-            <p>
-                  <label>Image:</label>
-                  <input type="text" name="image" placeholder="{{foundPerfume.name}}"/>
+                  <input type="text" name="composition" placeholder="{{foundPerfume.composition}}"  size="50"/>
             </p>
 
 
@@ -36,11 +35,11 @@
 
   </div>
 {{else}}
-<p> this is the edit page 
-you don't have access to this page </p>
+<div class="no-credentials">
+  <h2> This is the edit page.</h2>
+  <h3>You don't have credentials to edit. </h3> 
+</div>
 {{/if}}
-
-
 
 {{#if errorMessage}}
   <div class="error-message">{{ errorMessage }}</div>

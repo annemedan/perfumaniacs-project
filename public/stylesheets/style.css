@@ -300,3 +300,12 @@ button.btn-search {
   float: left;
   padding: 1rem;
 }
+
+.edit-perfume, h3{
+  display: flex;
+  justify-content: center;
+}
+
+.no-credentials {
+  padding-top: 10%;
+}
