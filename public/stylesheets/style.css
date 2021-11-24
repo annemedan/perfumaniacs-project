@@ -16,7 +16,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: rgb(192, 149, 141);
+  color: rgb(125, 87, 81);
   font-weight: bold;
   padding: 10px;
   -webkit-text-stroke: 1px rgb(143, 107, 101);
@@ -226,6 +226,7 @@ button > a:hover {
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgb(238, 210, 206);
+  border: 2px solid  rgb(179, 136, 128);
   transition: 0.3s;
   padding-top: 2rem;
   display: grid;
@@ -237,11 +238,12 @@ button > a:hover {
 
 /** Card for details page */
 .card-position{
-  padding-top: 8rem;
-  position: relative;
+  padding-top: 2.5rem;
+  align-items: center;
   }
 .card2 {
   background-color: white;
+  border: 2px solid  rgb(179, 136, 128);
   box-shadow: 0 4px 8px 0 rgb(238, 210, 206);
   transition: 0.3s;
   padding-top: 2.5rem;
@@ -351,4 +353,22 @@ h3 {
   display: flex;
   justify-content: center;
   margin-top: 10%;
+}
+
+/* Forms */
+.forms-font{
+  font-weight: 600;
+  font-family: "EB Garamond", serif;
+  font-size: 1.3rem;
+}
+
+h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: rgb(125, 87, 81);
+  font-weight: bold;
+  padding-top: 40px;
+  font-size: 2.5rem; 
+  -webkit-text-stroke: 1px rgb(143, 107, 101);
 }
