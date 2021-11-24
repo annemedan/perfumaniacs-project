@@ -1,30 +1,42 @@
-<div id="search-perfumes" class="bg-image">   
-{{! Search bar  }}
-      <div class="input-group">
-          
-          <form id="form" action="/perfumes/search" method="GET">
-                      
-          <input class="form-control rounded" placeholder="Search by favorite perfume or manufacturer" name="q" type="search" aria-label="Search" size="70%"/>
-          <button type="submit" class="btn btn-outline-primary btn-search">Search</button>
-          
-          </form>
+<div id="allperf" class="bg-image">
+  <div class="input-group">
+    <form id="form" action="/perfumes/search" method="GET">
+      <input class="form-control rounded" placeholder="Search by favorite perfume or manufacturer" name="q"
+        type="search" aria-label="Search" size="70%" />
+      <button type="submit" class="btn btn-outline-primary btn-search">Search</button>
+    </form>
+  </div>
+  <div class="card-position2">
+    {{#if searchResults}}
+    <p class="searched-for">Results for: <b> {{query}} </b> </p>
 
-      </div>
-      {{#if searchResults}}
-              <p class="searched-for">Results for: <b> {{query}} </b> </p>
-       
 
-      {{#each searchResults}}
-      <div class="card">
-        <img src="{{this.image}}" alt="Perfume Photo">
-        <div class="container-card">
-          <h4 class="perfume-name"><b>{{this.name}}</b></h4>
-          <p class="perfume-manufacturer">{{this.manufacturer}}</p>
-          <p class="fragrance-txt"><i>Fragrance:</i> {{this.fragrance}}</p>
-          <p class="fragrance-txt"><i>Composition:</i> {{this.composition}}</p>
+    {{#each searchResults}}
+
+    <div class="card2 mb-4" style="max-width: 60rem;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{this.image}}" alt="Perfume Photo" class="img-perfume-details">
+        </div>
+        <div class="col-md-8">
+          <div class="text-perfume">
+            <div class="container-card">
+              <h4 class="perfume-name"><b>{{this.name}}</b></h4>
+              <p class="perfume-manufacturer">{{this.manufacturer}}</p>
+              <p class="fragrance-txt"><i>Fragrance:</i> {{this.fragrance}}</p>
+              <p class="fragrance-txt"><i>Composition:</i> {{this.composition}}</p>
+            </div>
+          </div>
         </div>
       </div>
-      {{/each}}
+    </div>
+    {{/each}}
 
-      {{/if}}
+    {{/if}}
+  </div>
+  {{! Button to go to the top of the page }}
+  <button onclick="topFunction()" id="myBtn" title="Go to top"> &#x21e7 </button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </div>

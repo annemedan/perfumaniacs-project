@@ -51,6 +51,17 @@ li a:hover:not(.active) {
   background-color: rgb(212, 165, 156);
 }
 
+/** footer definitions */
+footer a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 footer {
   list-style-type: none;
   margin: 0;
@@ -226,7 +237,7 @@ button > a:hover {
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgb(238, 210, 206);
-  border: 2px solid  rgb(179, 136, 128);
+  border: 2px solid rgb(179, 136, 128);
   transition: 0.3s;
   padding-top: 2rem;
   display: grid;
@@ -237,13 +248,14 @@ button > a:hover {
 }
 
 /** Card for details page */
-.card-position{
+.card-position {
   padding-top: 2.5rem;
+  display: grid;  
   align-items: center;
-  }
+}
 .card2 {
   background-color: white;
-  border: 2px solid  rgb(179, 136, 128);
+  border: 2px solid rgb(179, 136, 128);
   box-shadow: 0 4px 8px 0 rgb(238, 210, 206);
   transition: 0.3s;
   padding-top: 2.5rem;
@@ -251,17 +263,12 @@ button > a:hover {
   display: grid;
   justify-content: center;
   margin-left: 20%;
-  margin-right: 20%; 
+  margin-right: 20%;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgb(192, 149, 141);
-}
-
-/* Add some padding inside the card container */
-.container-card {
-  padding: 2px 16px;
 }
 
 .card > img {
@@ -310,10 +317,12 @@ button.btn-search {
 }
 
 .fragrance-txt {
+  padding-right: 5rem;
   font-family: "EB Garamond", serif;
   font-weight: 300;
   display: flex;
   justify-content: center;
+  
 }
 
 .perfume-details-card {
@@ -352,11 +361,11 @@ h3 {
 .creation-page {
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 /* Forms */
-.forms-font{
+.forms-font {
   font-weight: 600;
   font-family: "EB Garamond", serif;
   font-size: 1.3rem;
@@ -369,6 +378,20 @@ h4 {
   color: rgb(125, 87, 81);
   font-weight: bold;
   padding-top: 40px;
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   -webkit-text-stroke: 1px rgb(143, 107, 101);
+}
+
+.card-body {
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+/** Find perfumes page */
+.card-position2 {
+ margin-left: 5%;
+ margin-right: 5%;
+ padding-bottom: 0;
 }
