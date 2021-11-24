@@ -1,10 +1,16 @@
-Each Store user - their favourite Lists
 
-    {{#each availables}}
-            {{#if this.user.username}}
-            <p>Store: {{this.user.username}}</p>
-                {{#each availables.perfume.name}}
-                Perfumes Available: <li>  {{this}} </li>
-                {{/each}}
-            {{/if}}
-    {{/each}}
+<h2>Availability</h2>
+
+
+{{#each storeAvailable}}
+
+   <ul> {{@key}}: 
+       {{#each this}}
+       <li> {{this}} </li>
+       {{/each}}
+       <br>
+   </ul> 
+
+{{/each}}
+
+

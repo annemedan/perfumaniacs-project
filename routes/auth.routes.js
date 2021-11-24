@@ -284,13 +284,28 @@ router.post('/available/:perfumeId', async (req, res) => {
 router.get('/available', async (req, res) => {
   try {
     let availables = await Available.find().populate("perfume").populate("user");
-    console.log("AVAILABLES ARRAY", availables);
+    //console.log("AVAILABLES ARRAY", availables);
     
-    const allUsers = 
+    const storeAvailable = {}; 
+
+    availables.forEach((obj) => {
+      //console.log("Object.keys(storeAvailable): ", Object.keys(storeAvailable));
+      if (!Object.keys(storeAvailable).includes(obj.user.username)){
+        storeAvailable[obj.user.username] = [];
+        //console.log(storeAvailable[obj.user.username]);
+      }
+      //console.log("array:", storeAvailable[obj.user.username] );
+      if (!storeAvailable[obj.user.username].includes(obj.perfume.name)) 
+      storeAvailable[obj.user.username].push(obj.perfume.name);
+    })
+    
+    console.log("test for the array",storeAvailable);
+    
     
     res.render("stores/store-availability.hbs", {
       availables,
-      user: req.session.user, 
+      user: req.session.user,
+      storeAvailable
     });
   } catch (error) {
     res.render("error");
