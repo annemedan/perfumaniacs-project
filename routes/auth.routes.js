@@ -209,9 +209,8 @@ router.get("/perfumes/search", async (req, res) => {
 });
 
 
-
-
 //*find by id and open edit page 
+
 router.get("/perfume/:perfumeId/edit", userLoggedIn, (req, res) => {
   const perfumeId = req.params.perfumeId;
   Perfume.findById(perfumeId)
@@ -223,11 +222,12 @@ router.get("/perfume/:perfumeId/edit", userLoggedIn, (req, res) => {
     })
 })
 
+//*this edits the perfumes
   router.post("/perfumes/:perfumeId/edit", userLoggedIn, (req, res) => {
     const { name, manufacturer, fragrance, composition } = req.body;
     
     console.log(req.body);
-
+    const perfumeId = req.params.perfumeId;
     Perfume.findByIdAndUpdate(perfumeId, { name, manufacturer, fragrance, composition })
         .then((updatedPerfume) => {
           console.log("updatedPerfume", updatedPerfume);  
@@ -235,44 +235,30 @@ router.get("/perfume/:perfumeId/edit", userLoggedIn, (req, res) => {
         })
         .catch((err)=> {
             console.log(err);
-            //res.render("movies/new-movie.hbs")
+            //res.render("perfumes/perfume-create.hbs")
         })
 })
 
 
-// router.get("/perfumes/:perfumeId/edit", userLoggedIn, (req, res) => {
-//   let userLoggedIn = false;
-//   const userInfo = req.session.user;
-//   if (userInfo){
-//     userLoggedIn = true;
-//   }
-//   if (userInfo.store === true){
-//     res.render("perfumes/perfume-edit", { userLoggedIn: userLoggedIn, userInfo });
-//   } else {
-//     res.render("perfumes/perfume-edit", { userLoggedIn: userLoggedIn, userInfo, errorMessage: "You don't have the credentials to access this page" });
-//   }
-// })
+// this creates a new perfume
+router.get("/perfumes/add", (req, res, next) => {
+  res.render("perfumes/perfume-create.hbs")
 
-//* post edited details - the details page has to have the edit/delete [these are 2 routes] button to the store
-
-
-// this would be the create a new perfume
-router.get("/perfumes/create", (req, res, next) => {
-  res.render("perfumes/new-perfume.hbs")
 });
 
-router.post("/perfumes/create", (req, res) => {
-  const { name, manufacturer, fragrance, composition, image } = req.body;
-
-  Perfume.create({ name, manufacturer, fragrance, composition, image }, { new: true})
+router.post("/perfumes/add", (req, res) => {
+  console.log("got to the post route");
+  let { name, manufacturer, fragrance, composition, image } = req.body;
+  console.log("after got req body");
+  Perfume.create({ name, manufacturer, fragrance, composition, image })
       .then((createdPerfume) => {
-          res.redirect("/allperfumes")
+        console.log(createdPerfume);
+          return res.redirect("/allperfumes")
       })
       .catch((err)=> {
           console.log(err);
-          res.render("perfumes/new-perfume.hbs")
+          res.render("perfumes/perfume-create.hbs")
       })
 })
-
 
 module.exports = router;

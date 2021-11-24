@@ -7,26 +7,26 @@
   <div class="edit-perfume">
           
 
-          <form action="/perfume/{{foundPerfume._id}}/edit" method="POST">
+          <form action="/perfumes/{{foundPerfume._id}}/edit" method="POST">
 
             <p>   
                   <label>Name:</label>
-                  <input type="text" name="name" placeholder="{{foundPerfume.name}}"  size="50"/>
+                  <input type="text" name="name" value="{{foundPerfume.name}}"  size="50"/>
               </p>
 
               <p>
                   <label>Manufacturer:</label>
-                  <input type="text" name="manufacturer" placeholder="{{foundPerfume.manufacturer}}"  size="50"/> 
+                  <input type="text" name="manufacturer" value="{{foundPerfume.manufacturer}}"  size="50"/> 
               </p>
 
             <p>
                   <label>Fragrance:</label>
-                  <input type="text" name="fragrance" placeholder="{{foundPerfume.fragrance}}"  size="50"/>
+                  <input type="text" name="fragrance" value="{{foundPerfume.fragrance}}"  size="50"/>
             </p>
 
             <p>
                   <label>Composition:</label>
-                  <input type="text" name="composition" placeholder="{{foundPerfume.composition}}"  size="50"/>
+                  <input type="text" name="composition" value="{{foundPerfume.composition}}"  size="50"/>
             </p>
 
 
