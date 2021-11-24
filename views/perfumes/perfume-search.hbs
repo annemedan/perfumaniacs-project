@@ -1,23 +1,28 @@
-
+<div id="search-perfumes" class="bg-image">   
 {{! Search bar  }}
-<div class="input-group">
-    <form id="form" action="/perfumes/search" method="GET">
-                
-     <input class="form-control rounded" placeholder="Search for your favorite perfume or manufacturer" name="q" type="search" aria-label="Search" /> 
-              <button type="submit" class="btn btn-outline-primary">Search</button>
-    </form>
-</div>
+      <div class="input-group">
+          
+          <form id="form" action="/perfumes/search" method="GET">
+                      
+          <input class="form-control rounded" placeholder="Search for your favorite perfume or manufacturer" name="q" type="search" aria-label="Search" size="70%"/>
+          <button type="submit" class="btn btn-outline-primary btn-search">Search</button>
+          
+          </form>
 
-<p class="searched-for">Results for: <b> {{query}} </b> </p>
+      </div>
+      {{#if searchResults}}
+      <p class="searched-for">Results for: <b> {{query}} </b> </p>
 
-{{#each searchResults}}
-<div class="card">
-  <img src="{{this.image}}" alt="Perfume Photo">
-  <div class="container-card">
-    <h4 class="perfume-name"><b>{{this.name}}</b></h4>
-    <p class="perfume-manufacturer">{{this.manufacturer}}</p>
-    <p><i>Fragrance:</i> {{this.fragrance}}</p>
-    <p><i>Composition:</i> {{this.composition}}</p>
-  </div>
+      {{#each searchResults}}
+      <div class="card">
+        <img src="{{this.image}}" alt="Perfume Photo">
+        <div class="container-card">
+          <h4 class="perfume-name"><b>{{this.name}}</b></h4>
+          <p class="perfume-manufacturer">{{this.manufacturer}}</p>
+          <p><i>Fragrance:</i> {{this.fragrance}}</p>
+          <p><i>Composition:</i> {{this.composition}}</p>
+        </div>
+      </div>
+      {{/each}}
+      {{/if}}
 </div>
-{{/each}}

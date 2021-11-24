@@ -201,12 +201,13 @@ button > a:hover {
 
 /* Search bar */
 .btn-outline-primary {
-  color: rgb(192, 149, 141);
+  color: white;
   border-color: rgb(192, 149, 141);
+  background-color: rgb(201, 165, 160);
 }
 .btn-outline-primary:hover {
-  color: rgb(192, 149, 141);
-  background-color: rgb(238, 210, 206);
+  color: rgb(179, 136, 128);
+  background-color: rgb(238, 229, 228);
   border-color: white;
 }
 
@@ -219,7 +220,7 @@ button > a:hover {
   justify-content: center;
   margin-left: 20%;
   margin-right: 20%;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
 }
 
@@ -246,4 +247,34 @@ button > a:hover {
   display: flex;
   justify-content: center;
  
+  font-weight: 1000;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.5%;
+  display: flex;
+  justify-content: center;
+}
+
+#search-perfumes {
+  background-image: url("/images/marbleGliter.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100%;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 100%) {
+  #search-perfumes {
+    margin-top: 0px;
+  }
+}
+
+
+button.btn-search {
+  display: flex;
+  justify-content: center;
+  margin-left: 45%;
 }

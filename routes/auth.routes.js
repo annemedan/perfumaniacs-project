@@ -193,7 +193,7 @@ router.post("/perfume/:perfumeId/delete", (req, res, next) => {
 // //* search 
 
 router.get("/perfumes/search", async (req, res) => {
-    const query = req.query.q
+    let query = req.query.q
     console.log(">>---", query);
 
     let searchResults;
