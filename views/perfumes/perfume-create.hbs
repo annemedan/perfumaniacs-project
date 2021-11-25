@@ -1,5 +1,6 @@
 
 <div id="allperf" class="bg-image">
+      {{#if user.store}}
       <h4>New Perfume</h4>
       <div class="card-position">
             <div class="edit-perfume">
@@ -41,3 +42,13 @@
             </div>
       </div>
 </div>
+ {{else}}
+        <div class="no-credentials">
+          <h2> This is the add page.</h2>
+          <h3>You don't have credentials to add. </h3>
+        </div>
+{{/if}}
+
+      {{#if errorMessage}}
+      <div class="error-message">{{ errorMessage }}</div>
+      {{/if}}
