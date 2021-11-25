@@ -2,7 +2,7 @@
   {{! Search bar }}
   <div class="input-group">
     <form id="form" action="/perfumes/search" method="GET">
-      <input class="form-control rounded" placeholder="Search by favorite perfume or manufacturer" name="q"
+      <input class="form-control rounded" placeholder="Search by favorite perfume, manufacturer, fragrance or component" name="q"
         type="search" aria-label="Search" size="70%" />
       <button type="submit" class="btn btn-outline-primary btn-search">Search</button>
     </form>
@@ -23,8 +23,8 @@
             <div class="container-card">
               <h4 class="perfume-name"><b>{{this.name}}</b></h4>
               <p class="perfume-manufacturer">{{this.manufacturer}}</p>
-              <p class="fragrance-txt-find"><i>Fragrance:</i> {{this.fragrance}}</p>
-              <p class="fragrance-txt-find"><i>Composition:</i> {{this.composition}}</p>
+              <p class="fragrance-txt-find"><i>Fragrance: </i> {{this.fragrance}}</p>
+              <p class="fragrance-txt-find"><i>Composition: </i> {{this.composition}}</p>
             </div>
           </div>
         </div>
