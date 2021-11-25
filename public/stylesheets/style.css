@@ -435,3 +435,11 @@ h4 {
 .btn-edit{
 padding: 10;
 }
+
+.hello-user {
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(143, 107, 101);
+  padding: 14px 16px;
+  text-decoration: none;
+}
