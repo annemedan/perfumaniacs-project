@@ -202,7 +202,12 @@ router.get("/perfumes/search", async (req, res) => {
     if (query) {
         let regex = new RegExp(query, 'i', 'g');
         searchResults = await Perfume.find({ $or:
-           [ { name: regex  }, {manufacturer: regex} ]
+           [ 
+             { name: regex  }, 
+            {manufacturer: regex}, 
+            {fragrance: regex}, 
+            {composition: regex} 
+          ]
         });
 
     } else {
