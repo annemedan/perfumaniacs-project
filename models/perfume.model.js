@@ -7,7 +7,7 @@ const perfumeSchema = new Schema(
     manufacturer: {type: String},
     fragrance: {type: [String]},
     composition: {type: [String]},
-    image: {type: String, default: "https://cdn4.iconfinder.com/data/icons/beauty-makeup/100/spray_-_perfume-512.png"}
+    image: {type: String, default: "https://i.pinimg.com/736x/2d/de/97/2dde976ee4e7840dd025dbf86ea633b2.jpg"}
   },
 );
 
