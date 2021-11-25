@@ -10,26 +10,27 @@
             <div class="container-card">
               <h3 class="perfume-name">{{foundPerfume.name}} </h3>
               <p class="perfume-manufacturer">{{foundPerfume.manufacturer}}</p>
-              <p class="fragrance-txt"><i>Fragrance notes: </i> {{#each foundPerfume.fragrance}}  {{this}}   {{/each}}</p>
-              <p class="fragrance-txt"><i>Composition: </i> {{#each foundPerfume.composition}} {{this}}   {{/each}}</p>
+              <p class="fragrance-txt"><i>Fragrance notes: </i> {{#each foundPerfume.fragrance}} {{this}} {{/each}}</p>
+              <p class="fragrance-txt"><i>Composition: </i> {{#each foundPerfume.composition}} {{this}} {{/each}}</p>
               </p>
             </div>
           </div>
-
           <div class="buttons-to-edit">
             {{#if user.store}}
-            <button><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>
+            <button class="btn-edit"><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>
             {{/if}}
 
 
             <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
-              {{#if user.store}} <button action="submit">Delete</button> {{/if}}
+              {{#if user.store}} <button class="btn-edit" action="submit">Delete</button> {{/if}}
             </form>
 
             <form action="/available/{{foundPerfume._id}}" method="POST">
-              {{#if user.store}} <button action="submit">Add to stock</button> {{/if}}
+              {{#if user.store}} <button class="btn-edit" action="submit">Add to stock</button> {{/if}}
             </form>
-
+            <form action="/delete-available/{{foundPerfume._id}}" method="POST">
+              {{#if user.store}} <button class="btn-edit" action="submit">Remove from stock</button> {{/if}}
+            </form>
 
           </div>
         </div>
