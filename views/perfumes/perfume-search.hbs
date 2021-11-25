@@ -27,6 +27,25 @@
               <p class="fragrance-txt-find"><i>Composition: </i> {{this.composition}}</p>
             </div>
           </div>
+           <div class="buttons-to-edit">
+            {{#if user.store}}
+            <button class="btn-edit"><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>
+            {{/if}}
+
+
+            <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
+              {{#if user.store}} <button class="btn-edit" action="submit">Delete</button> {{/if}}
+            </form>
+  
+            <form action="/available/{{foundPerfume._id}}" method="POST">
+              {{#if user.store}} <button class="btn-edit" action="submit">Add to stock</button> {{/if}}
+            </form>
+            <form action="/delete-available/{{foundPerfume._id}}" method="POST">
+              {{#if user.store}} <button class="btn-edit" action="submit">Remove from stock</button> {{/if}}
+            </form>
+            </p>
+
+          </div>
         </div>
       </div>
     </div>
