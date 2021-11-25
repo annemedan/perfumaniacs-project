@@ -288,8 +288,8 @@ router.post('/available/:perfumeId', async (req, res) => {
 
 router.get('/available', async (req, res) => {
   try {
-    let availables = await Available.find().populate("perfume").populate("user");
-    //console.log("AVAILABLES ARRAY", availables);
+    let availables = await Available.find().populate("perfume user");
+    console.log("AVAILABLES ARRAY", availables);
     
     const storeAvailable = {}; 
 
@@ -300,18 +300,20 @@ router.get('/available', async (req, res) => {
         //console.log(storeAvailable[obj.user.username]);
       }
       //console.log("array:", storeAvailable[obj.user.username] );
-      if (!storeAvailable[obj.user.username].includes(obj.perfume.name)) 
-      storeAvailable[obj.user.username].push(obj.perfume.name);
+      if (!storeAvailable[obj.user.username].includes(obj.perfume.name)) {
+        storeAvailable[obj.user.username].push(obj.perfume.name);
+      }
     })
     
-    console.log("test for the array",storeAvailable);
+    console.log("test for the array", storeAvailable);
     
     
-    res.render("stores/store-availability.hbs", {
+    res.render("stores/store-availability", {
       availables,
       user: req.session.user,
       storeAvailable
     });
+
   } catch (error) {
     res.render("error");
     console.log("An error occurred", error);
@@ -320,9 +322,9 @@ router.get('/available', async (req, res) => {
 
 // // Delete from favorites
 
-// router.post('/delete-favorite/:recipeId', async (req, res) => {
-//   const toDel = await Favorite.findByIdAndRemove(req.params.recipeId);
-//   res.redirect('/favorites');
+// router.post('/delete-available/:perfumeId', async (req, res) => {
+//   const toDel = await Available.findByIdAndRemove(req.params.perfumeId);
+//   res.redirect('/allperfumes');
 // });
 
 
