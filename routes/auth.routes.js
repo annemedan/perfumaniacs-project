@@ -300,12 +300,29 @@ router.get('/available', async (req, res) => {
         //console.log(storeAvailable[obj.user.username]);
       }
       //console.log("array:", storeAvailable[obj.user.username] );
-      if (obj.user && !storeAvailable[obj.user.username].includes(obj.perfume.name)) {
-        storeAvailable[obj.user.username].push(obj.perfume.name);
+      // if (obj.user && !storeAvailable[obj.user.username].includes(obj.perfume.name)) {
+      //   storeAvailable[obj.user.username].push(obj.perfume.name);
+      // }
+      let counter = 1;
+
+      if (obj.user && !storeAvailable[obj.user.username].some((element, index) => {
+        return element.perfume === obj.perfume.name;
+      })) {
+        let newObj = { name: obj.user.username, perfume: obj.perfume.name, quantity: counter , perfId: obj.perfume._id}
+        storeAvailable[obj.user.username].push(newObj);
+        //console.log("on if", storeAvailable);
+      } 
+      else {
+        storeAvailable[obj.user.username].forEach((element, index) => {
+          if (element.perfume === obj.perfume.name) {
+            element.quantity += 1;
+          }
+          //console.log("on else", storeAvailable);
+        })
       }
     })
     
-    //console.log("test for the array", storeAvailable);
+   // console.log("test for the array", storeAvailable);
     
     
     res.render("stores/store-availability", {
