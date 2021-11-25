@@ -213,7 +213,7 @@ router.get("/perfumes/search", async (req, res) => {
     } else {
         searchResults = [];
     }
-
+    //console.log( "searchResults", searchResults );
     res.render("perfumes/perfume-search", { searchResults, query, user: req.session.user});
 });
 
