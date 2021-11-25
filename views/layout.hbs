@@ -16,7 +16,9 @@
     <li class="nav-bar"><a href="/">Home</a></li>
     <li class="nav-bar"><a href="/allperfumes">All Perfumes</a></li>
     <li class="nav-bar"><a href="/perfumes/search">Find Perfume</a></li>
-    <li class="nav-bar"><a href="/perfumes/add">Add new Perfurme</a></li>
+      {{#if user.store}}
+      <li class="nav-bar"><a href="/perfumes/add">Add new Perfurme</a></li>
+      {{/if}}
     <li class="nav-bar"><a href="/available">Check Availability</a></li>
     <li class="nav-bar"><a href="/logout">Log Out</a></li>
     {{else}}
