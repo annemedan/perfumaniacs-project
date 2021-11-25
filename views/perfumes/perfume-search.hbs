@@ -1,30 +1,38 @@
-<div id="search-perfumes" class="bg-image">   
-{{! Search bar  }}
-      <div class="input-group">
-          
-          <form id="form" action="/perfumes/search" method="GET">
-                      
-          <input class="form-control rounded" placeholder="Search by favorite perfume or manufacturer" name="q" type="search" aria-label="Search" size="70%"/>
-          <button type="submit" class="btn btn-outline-primary btn-search">Search</button>
-          
-          </form>
+<div id="search-perfumes" class="bg-image">
+  {{! Search bar }}
+  <div class="input-group">
+    <form id="form" action="/perfumes/search" method="GET">
+      <input class="form-control rounded" placeholder="Search by favorite perfume or manufacturer" name="q"
+        type="search" aria-label="Search" size="70%" />
+      <button type="submit" class="btn btn-outline-primary btn-search">Search</button>
+    </form>
+  </div>
 
-      </div>
-      {{#if searchResults}}
-              <p class="searched-for">Results for: <b> {{query}} </b> </p>
-       
+  {{#if searchResults}}
+  <p class="searched-for">Results for: <b> {{query}} </b> </p>
 
-      {{#each searchResults}}
-      <div class="card">
-        <img src="{{this.image}}" alt="Perfume Photo">
-        <div class="container-card">
-          <h4 class="perfume-name"><b>{{this.name}}</b></h4>
-          <p class="perfume-manufacturer">{{this.manufacturer}}</p>
-          <p class="fragrance-txt"><i>Fragrance:</i> {{this.fragrance}}</p>
-          <p class="fragrance-txt"><i>Composition:</i> {{this.composition}}</p>
+  {{#each searchResults}}
+  <div class="card-position">
+    <div class="card2 mb-4" style="max-width: 60rem;">
+      <div class="row g-0">
+        <div class="img-left-side col-md-4">
+          <img src="{{this.image}}" alt="Perfume Photo">
+        </div>
+        <div class="col-md-8">
+          <div class="text-perfume">
+            <div class="container-card">
+              <h4 class="perfume-name"><b>{{this.name}}</b></h4>
+              <p class="perfume-manufacturer">{{this.manufacturer}}</p>
+              <p class="fragrance-txt-find"><i>Fragrance:</i> {{this.fragrance}}</p>
+              <p class="fragrance-txt-find"><i>Composition:</i> {{this.composition}}</p>
+            </div>
+          </div>
         </div>
       </div>
-      {{/each}}
+    </div>
+  </div>
 
-      {{/if}}
+  {{/each}}
+
+  {{/if}}
 </div>
