@@ -2,21 +2,16 @@
   <h2>Availability</h2>
     <div class="card-position">
         {{#each storeAvailable}}
-            <div class="card2 mb-4" style="max-width: 60rem;">
-                
-                <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="text-perfume">
-                            
-                                    <div class="container-card">
+            <div class="edit-perfume">
+                <div class="card text-left" style="width: 60rem;">
+                    <div class="card-body">
                                         <ul> <h3 class="perfume-name"> {{@key}}: </h3>
                                         {{#each this}}
                                         <li> {{this}} </li>
                                         {{/each}}
                                     
                                         </ul> 
-                                    </div>
-                        </div>
+                                   
                     </div>
                     
                 </div>

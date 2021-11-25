@@ -2,9 +2,9 @@
   <div class="card-position">
     <div class="card2 mb-4" style="max-width: 60rem;">
       <div class="row g-0">
-        <div class="col-md-4">
+          <div class="col-md-4">
           <img src="{{foundPerfume.image}}" alt="Perfume Photo" class="img-perfume-details" />
-        </div>
+          </div>
         <div class="col-md-8">
           <div class="text-perfume">
             <div class="container-card">
@@ -16,24 +16,26 @@
             </div>
           </div>
 
-          <div class="buttons-to-edit">
+        </div>
+      <div class="buttons-to-edit">
             {{#if user.store}}
-            <button><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>
+            <button class="btn-edit"><a href="/perfume/{{foundPerfume._id}}/edit">Edit</a></button>
             {{/if}}
 
 
             <form action="/perfume/{{foundPerfume._id}}/delete" method="POST">
-              {{#if user.store}} <button action="submit">Delete</button> {{/if}}
+              {{#if user.store}} <button class="btn-edit" action="submit">Delete</button> {{/if}}
             </form>
-
+  
             <form action="/available/{{foundPerfume._id}}" method="POST">
-              {{#if user.store}} <button action="submit">Add to stock</button> {{/if}}
+              {{#if user.store}} <button class="btn-edit" action="submit">Add to stock</button> {{/if}}
             </form>
-
+            <form action="/delete-available/{{foundPerfume._id}}" method="POST">
+              {{#if user.store}} <button class="btn-edit" action="submit">Remove from stock</button> {{/if}}
+            </form>
+            </p>
 
           </div>
-        </div>
-
       </div>
     </div>
   </div>

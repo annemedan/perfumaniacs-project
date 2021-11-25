@@ -289,23 +289,23 @@ router.post('/available/:perfumeId', async (req, res) => {
 router.get('/available', async (req, res) => {
   try {
     let availables = await Available.find().populate("perfume user");
-    console.log("AVAILABLES ARRAY", availables);
+    //console.log("AVAILABLES ARRAY", availables);
     
     const storeAvailable = {}; 
 
     availables.forEach((obj) => {
       //console.log("Object.keys(storeAvailable): ", Object.keys(storeAvailable));
-      if (!Object.keys(storeAvailable).includes(obj.user.username)){
+      if (obj.user && !Object.keys(storeAvailable).includes(obj.user.username)){
         storeAvailable[obj.user.username] = [];
         //console.log(storeAvailable[obj.user.username]);
       }
       //console.log("array:", storeAvailable[obj.user.username] );
-      if (!storeAvailable[obj.user.username].includes(obj.perfume.name)) {
+      if (obj.user && !storeAvailable[obj.user.username].includes(obj.perfume.name)) {
         storeAvailable[obj.user.username].push(obj.perfume.name);
       }
     })
     
-    console.log("test for the array", storeAvailable);
+    //console.log("test for the array", storeAvailable);
     
     
     res.render("stores/store-availability", {
@@ -320,12 +320,19 @@ router.get('/available', async (req, res) => {
   }
 });
 
-// // Delete from favorites
+// Delete from favorites
 
-// router.post('/delete-available/:perfumeId', async (req, res) => {
-//   const toDel = await Available.findByIdAndRemove(req.params.perfumeId);
-//   res.redirect('/allperfumes');
-// });
+router.post("/delete-available/:perfumeId", async (req, res) => {
+  const perfumeId = req.params.perfumeId;
+  console.log("perfumeId", perfumeId, req.session.user._id);
+  const newTry = await Available.find( {$and: [ {user: req.session.user._id }, { perfume: req.params.perfumeId }]} )
+
+  console.log(newTry);
+  console.log(newTry[0]._id);
+  await Available.findByIdAndDelete(newTry[0]._id)
+
+  res.redirect("/available");
+});
 
 
 module.exports = router;
