@@ -98,7 +98,7 @@ footer {
 
 h1 {
   font-family: "Puppies Play", cursive;
-  font-size: 9rem;
+  font-size: 7rem;
 }
 
 label {
@@ -240,18 +240,20 @@ button > a:hover {
   border: 2px solid rgb(179, 136, 128);
   transition: 0.3s;
   padding-top: 2rem;
+  padding-bottom: 2rem;
   display: grid;
   justify-content: space-around;
   margin-left: 20%;
   margin-right: 20%;
-  margin-bottom: 2rem;
+
 }
 
 /** Card for details page */
 .card-position {
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
   display: grid;
   align-items: center;
+  padding-bottom: 2rem;
 }
 .card2 {
   background-color: white;
@@ -418,10 +420,18 @@ h4 {
 .container-card-find {
   display: grid;
   justify-self: center;
-
 }
 
-/* .col-md-8 {
-  padding-bottom: 10rem;
+/** Error page */
 
-} */
+.broken {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 25rem;
+}
+
+/** Button of the card */
+.btn-edit{
+padding: 10;
+}
