@@ -250,7 +250,7 @@ button > a:hover {
 /** Card for details page */
 .card-position {
   padding-top: 2.5rem;
-  display: grid;  
+  display: grid;
   align-items: center;
 }
 .card2 {
@@ -322,7 +322,21 @@ button.btn-search {
   font-weight: 300;
   display: flex;
   justify-content: center;
-  
+}
+.fragrance-txt-all {
+  padding-right: 5rem;
+  font-family: "EB Garamond", serif;
+  font-weight: 300;
+  display: grid;
+  justify-content: center;
+  padding: 0;
+}
+.fragrance-txt-find {
+  padding-right: 5rem;
+  font-family: "EB Garamond", serif;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
 }
 
 .perfume-details-card {
@@ -391,7 +405,18 @@ h4 {
 
 /** Find perfumes page */
 .card-position2 {
- margin-left: 5%;
- margin-right: 5%;
- padding-bottom: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 0;
+}
+
+.img-left-side {
+  height: 13rem;
+  display: flex;
+}
+
+.container-card-find {
+  display: grid;
+  justify-self: center;
+
 }
