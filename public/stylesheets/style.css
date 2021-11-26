@@ -443,3 +443,12 @@ padding: 10;
   padding: 14px 16px;
   text-decoration: none;
 }
+
+li {
+  list-style-type: none;
+}
+
+.avail-card {
+  justify-content: left;
+  padding-left: 0.5rem;
+}

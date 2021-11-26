@@ -13,10 +13,10 @@
                         <div class="text-perfume">
 
                             <div class="container-card">
-                                <ul>
+                                <ul class="avail-card">
                                     <h3 class="perfume-name"> {{@key}}: </h3>
                                         {{#each this}}
-                                            <li><a href="/perfume/{{this.perfId}}"> {{this.perfume}} </a> (In Stock: {{this.quantity}} ) </li>
+                                            <li><a href="/perfume/{{this.perfId}}"> {{this.perfume}} </a> (In Stock: {{this.quantity}}) </li>
                                             {{!--<li><a href="/perfume/"> {{this}} </a>  </li> --}}
                                         {{/each}}
 
