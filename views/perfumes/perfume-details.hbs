@@ -34,8 +34,26 @@
               {{#if user.store}} <button class="btn-edit" action="submit">Remove from stock</button> {{/if}}
             </form>
             </p>
-
+            <br>
           </div>
+          <div> 
+            {{!-- <div class="row">
+            {{#each this.comments}}
+              <p class="custom-review"><strong>{{this.review.username}} </strong> &nbsp; {{this.text}}</p>
+            {{/each}}
+            </div> --}}
+            
+{{!-- 
+              <p>
+                <form action="/perfume/:perfumeId/reviews" method="POST">
+                  {{#if user}} <input class="form-control rounded" type="text"
+                placeholder="Review this perfume" aria-label="Recipient's username" aria-describedby="button-addon2"
+                name="text"/>
+                  <button type="submit" class="btn btn-outline-primary btn-search">Review</button>{{/if}}
+                </form>
+              </p> --}}
+
+            </div>
       </div>
     </div>
   </div>

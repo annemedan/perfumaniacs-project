@@ -7,6 +7,7 @@ const zxcvbn = require("zxcvbn");
 const userLoggedIn = require("./../middleware/login-confirmation");
 const Store = require("../models/store.model");
 const Available = require("../models/availability.model");
+const Review = require("../models/review.model");
 
 
 //import the data 
@@ -337,7 +338,7 @@ router.get('/available', async (req, res) => {
   }
 });
 
-// Delete from favorites
+// Delete from availables
 
 router.post("/delete-available/:perfumeId", async (req, res) => {
   const perfumeId = req.params.perfumeId;
@@ -350,6 +351,29 @@ router.post("/delete-available/:perfumeId", async (req, res) => {
 
   res.redirect("/available");
 });
+
+//! ADD A REVIEW something to implement later
+
+// router.post("/perfume/:perfumeId/reviews", async (req, res) => {
+//   try {
+//     const perfumeId = req.params.perfumeId;
+//     const { text } = req.body;
+
+//     const createdReview = await Review.create({
+//       reviewer: req.session.user._id,
+//       perfume: perfumeId,
+//       text,
+//     });
+    
+//     let reviewsList = await Review.find().populate("perfume reviewer");
+
+//     await Review.findByIdAndUpdate(perfumeId, { $push: { reviews: createdReview._id } }, reviewsList );
+
+//     res.render("/perfume/:perfumeId");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 
 module.exports = router;
