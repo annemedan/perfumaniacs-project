@@ -2,33 +2,37 @@
   <h2>Perfumes List</h2>
 
   
-  <div class="container mt-4">
-    <div class="row">
+    <div class="container mt-4" type="submit">
+      
+        <div class="row">
 
-      {{#each foundPerfumes}}
-        <div class="col-md-4 col-sm-6">
-          <div class="card card-block">
-          
-            <div class="img-card-section">
-              <img class="img-perfume" src="{{this.image}}" alt="Photo of sunset">
-            </div>
+        {{#each foundPerfumes}}
+          <div class="col-md-4 col-sm-6">
+            <div class="card card-block">
+                <a href="/perfume/{{this._id}}">
+                  
+                    <div class="img-card-section">
+                      
+                      <img class="img-perfume" src="{{this.image}}" alt="Photo of sunset">
+                    </div>
 
-            <div class="text-perfume">
-              <p class="perfume-name mt-3 mb-3">{{this.name}}</p>
-              <p class="perfume-manufacturer">{{this.manufacturer}}</p>
-              <p class="fragrance-txt-all"> Fragrance notes: {{this.fragrance}}</p>
-            {{#if ../user}}
-            <form action="/perfume/{{this._id}}" method="GET">
-              <button class="perfbutton" type="submit">Further details</button>
-            </form>
-            {{/if}}
+                    <div class="text-perfume">
+                      <p class="perfume-name mt-3 mb-3">{{this.name}}</p>
+                      <p class="perfume-manufacturer">{{this.manufacturer}}</p>
+                      <p class="fragrance-txt-all"> Fragrance notes: {{this.fragrance}}</p>
+                      </form>
+                      {{!-- {{#if ../user}}
+                      <form action="/perfume/{{this._id}}" method="GET">
+                        <button class="perfbutton" type="submit">Further details</button>
+                      </form>
+                      {{/if}} --}}
+                    </div>
+                  </a>
           </div>
-
         </div>
-      </div>
 
-      {{/each}}
-    </div>
+        {{/each}}
+      </div>
     {{! Button to go to the top of the page }}
     <button onclick="topFunction()" id="myBtn" title="Go to top"> &#x21e7 </button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
